@@ -10,11 +10,12 @@
 
 <body class="index-page">
   <header class="main-header">
-    <div class="container">
-      <div class="header-header">
-        <img width="" height="" src="">
-        <form class="search-form">
+    <div class="header-header container">
+      <div class="header-left">
+        <img class="logo" src="img/logo.png" width="164" height="51">
+        <form class="header-form" action="">
           <select>
+            <option selected>Browse</option>
             <optgroup label="Women">
               <option>Dresses</option>
               <option>Tops</option>
@@ -35,107 +36,58 @@
               <option>Jackets/vests</option>
             </optgroup>
           </select>
-          <input type="text">
-          <button type="submit">Найти</button>
+          <input type="text" placeholder="Search for Item...">
+          <button type="submit"><span class="visually-hidden">Найти</span></button>
         </form>
-        <a href="">Корзина</a>
-        <a href="">My account</a>
       </div>
-
-      <section class="mega-menu">
-        <div class="mega-menu-column">
-          <h3>Women</h3>
-          <ul>
-            <li>Dresses</li>
-            <li>Tops</li>
-            <li>Sweaters/Knits</li>
-            <li>Jackets/Coats</li>
-            <li>Blazers</li>
-            <li>Denim</li>
-            <li>Leggings/Pants</li>
-            <li>Skirts/Shorts</li>
-            <li>Accessories</li>
-          </ul>
-        </div>
-        <div class="mega-menu-column">
-          <h3>Women</h3>
-          <ul>
-            <li>Dresses</li>
-            <li>Tops</li>
-            <li>Sweaters/Knits</li>
-            <li>Jackets/Coats</li>
-          </ul>
-          <h3>Women</h3>
-          <ul>
-            <li>Dresses</li>
-            <li>Tops</li>
-            <li>Sweaters/Knits</li>
-          </ul>
-        </div>
-        <div class="mega-menu-column">
-          <h3>Women</h3>
-          <ul>
-            <li>Dresses</li>
-            <li>Tops</li>
-            <li>Sweaters/Knits</li>
-            <li>Jackets/Coats</li>
-          </ul>
-          <img width="264px" height="170px">
-        </div>
-      </section>
-      <section class="cart">
-        <div class="item-in-cart">
-          <img>
-          <h3>Reboxzane</h3>
-          <span>1 x $250</span>
-        </div>
-        <div class="item-in-cart">
-          <img>
-          <h3>Reboxzane</h3>
-          <span>1 x $250</span>
-        </div>
-        <span class="total-price">Total $500.00</span>
-        <button type="button">Checkout</button>
-        <a href="">Go to cart</a>
-      </section>
-      <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">Man</a></li>
-        <li><a href="">Women</a></li>
-        <li><a href="">Kids</a></li>
-        <li><a href="">Accoseriese</a></li>
-        <li><a href="">featured</a></li>
-        <li><a href="">Hot Deals</a></li>
-      </ul>
-      <nav>
-        <ul>
-          <li><a href="">Product</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">User guide</a></li>
-          <li><a href="">Tearms</a></li>
-          <li><a href="">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="header-right">
+        <a href="" class="cart-button"><span class="visually-hidden">Cart</span></a>
+        <a class="account-button" href="#">My account</a>
+      </div>
     </div>
+
+    <nav class="main-navigation">
+      <ul class="container">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Man</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">Kids</a></li>
+        <li><a href="#">Accoseriese</a></li>
+        <li><a href="#">featured</a></li>
+        <li><a href="#">Hot Deals</a></li>
+      </ul>
+    </nav>
+    <nav class="second-nav">
+      <ul class="container">
+        <li><a href="">Product</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">User guide</a></li>
+        <li><a href="">Tearms</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+    </nav>
   </header>
+
   <section class="main-slider">
     <p class="slider-slogan"><b>The brand</b> of&nbsp;luxerious <span>fashion</span></p>
   </section>
+
   <div class="container">
     <section class="categories clearfix">
-      <div class="categories-item">
+      <a href=# class="categories-item">
         <p>hot deal<br><span>for men</span></p>
-      </div>
-      <div class="categories-item">
+      </a>
+      <a href=# class="categories-item">
         <p>30% offer<br><span>women</span></p>
-      </div>
-      <div class="categories-item">
+      </a>
+      <a href=# class="categories-item">
         <p>new arrivals<br><span>for kids</span></p>
-      </div>
-      <div class="categories-item">
+      </a>
+      <a href=# class="categories-item">
         <p>luxirous &amp; trendy<br><span>accesories</span></p>
-      </div>
+      </a>
     </section>
+
     <section class="products">
       <h2>Featured Items</h2>
       <p>Shop for items based on what we featured in this week</p>
@@ -181,7 +133,7 @@
           <div class="buy-shadow"><a href="" class="products-buy">Buy</a></div>
         </li>
       </ul>
-      <a href="" class="red-button">Browse all Product</a>
+      <a href="" class="browse-all-button">Browse all Product</a>
     </section>
 
     <section class="features">
@@ -204,13 +156,14 @@
       <p class="tagline"><span>30%</span> <b>OFFER</b><br>FOR WOMEN</p>
     </section>
   </div>
+
   <section class="subscribe">
     <div class="container">
       <div class="subscribe-left">
         <q>Vestibulum quis porttitor dui! Quisque viverra nunc mi,
           a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium</q><br>
         <span class="subscribe-quote-autor">Bin Burhan</span><br>
-          <span class="subscribe-quote-address">Dhaka, Bd</span>
+        <span class="subscribe-quote-address">Dhaka, Bd</span>
       </div>
       <div class="subscribe-right">
         <h2>Subscribe</h2>
@@ -222,11 +175,12 @@
       </div>
     </div>
   </section>
+
   <footer class="main-footer">
-    <div class="container">
-      <div class="footer-top">
+    <div class="footer-top">
+      <div class="container">
         <div class="footer-column">
-          <img class="logo" src="img/logo.png">
+          <img class="logo" src="img/logo.png" width="164" height="51">
           <p>Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of processes and cross-unit partnerships.</p>
 
           <p>Efficiently plagiarize 24/365 action items and focused infomediaries.
@@ -264,18 +218,84 @@
           </ul>
         </div>
       </div>
-      <div class="footer-bottom">
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
         <p>© 2017 Brand All Rights Reserved.</p>
         <ul class="social-links">
-          <li><a class="social-link" href="https://www.facebook.com"><span class="visually-hidden">Facebook</span></a></li>
-          <li><a class="social-link" href="https://twitter.com/"><span class="visually-hidden">Twitter</span></a></li>
-          <li><a class="social-link" href="https://www.instagram.com"><span class="visually-hidden">Instagramm</span></a></li>
-          <li><a class="social-link" href="https://www.pinterest.ru/"></a><span class="visually-hidden">Pinterest</span></li>
-          <li><a class="social-link" href="https://plus.google.com/discover"></a><span class="visually-hidden">Google+</span></li>
+          <li><a href="https://www.facebook.com"><span class="visually-hidden">Facebook</span></a></li>
+          <li><a href="https://twitter.com/"><span class="visually-hidden">Twitter</span></a></li>
+          <li><a href="https://www.instagram.com"><span class="visually-hidden">Instagramm</span></a></li>
+          <li><a href="https://www.pinterest.ru/"></a><span class="visually-hidden">Pinterest</span></li>
+          <li><a href="https://plus.google.com/discover"></a><span class="visually-hidden">Google+</span></li>
         </ul>
       </div>
     </div>
   </footer>
+
+  <section class="modal modal-mega-menu">
+    <div class="mega-menu-column">
+      <h3>Women</h3>
+      <ul>
+        <li><a href="#">Dresses</a></li>
+        <li><a href="#">Tops</a></li>
+        <li><a href="#">Sweaters/Knits</a></li>
+        <li><a href="#">Jackets/Coats</a></li>
+        <li><a href="#">Blazers</a></li>
+        <li><a href="#">Denim</a></li>
+        <li><a href="#">Leggings/Pants</a></li>
+        <li><a href="#">Skirts/Shorts</a></li>
+        <li><a href="#">Accessories</a></li>
+      </ul>
+    </div>
+    <div class="mega-menu-column">
+      <h3>Women</h3>
+      <ul>
+        <li><a href="#">Dresses</a></li>
+        <li><a href="#">Tops</a></li>
+        <li><a href="#">Sweaters/Knits</a></li>
+        <li><a href="#">Jackets/Coats</a></li>
+      </ul>
+      <h3>Women</h3>
+      <ul>
+        <li><a href="#">Dresses</a></li>
+        <li><a href="#">Tops</a></li>
+        <li><a href="#">Sweaters/Knits</a></li>
+      </ul>
+    </div>
+    <div class="mega-menu-column">
+      <h3>Women</h3>
+      <ul>
+        <li><a href="#">Dresses</a></li>
+        <li><a href="#">Tops</a></li>
+        <li><a href="#">Sweaters/Knits</a></li>
+        <li><a href="#">Jackets/Coats</a></li>
+      </ul>
+      <img src="img/mega-menu.jpg" width="255px" height="118px">
+    </div>
+  </section>
+
+  <section class="modal modal-cart">
+    <div class="item-in-cart">
+      <img src="img/item-in-cart-1.jpg" width="72" height="85" alt="green man's t-shirt">
+      <div class="description">
+        <h3>Reboxzane</h3>
+        <div class="rating-stars"><span class="visually-hidden"> 4,5 stars</span></div>
+        <span>1 x $250</span>
+      </div>
+    </div>
+    <div class="item-in-cart">
+      <img src="img/item-in-cart-2.jpg" width="72" height="85" alt="white women's t-shirt">
+      <div class="description">
+        <h3>Reboxzane</h3>
+        <div class="rating-stars"><span class="visually-hidden"> 4,5 stars</span></div>
+        <span>1 x $250</span>
+      </div>
+    </div>
+    <p class="total-price"><b>Total</b><b>$500.00</b></p>
+    <button type="button" class="checkout-button">Checkout</button>
+    <a href="#" class="go-to-cart">Go to cart</a>
+  </section>
 </body>
 
 </html>
