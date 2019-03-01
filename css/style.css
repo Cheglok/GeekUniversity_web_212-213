@@ -44,8 +44,6 @@ button:active {
 /*Хедер*/
 
 .index-page {
-  width: 1600px;
-  margin: 0 auto;
   color: #222222;
   font-family: "Lato", Arial, sans-serif;
   font-size: 14px;
@@ -79,6 +77,12 @@ button:active {
 
 .logo {
   margin-right: 37px;
+}
+
+.logo:hover {
+  transform: rotate(-10deg);
+  box-shadow: 0 0 0 1px #f16d7f;
+  border-radius: 20px;
 }
 
 .header-form {
@@ -221,19 +225,14 @@ button:active {
 /*Главный слайдер*/
 
 .main-slider {
-  box-sizing: border-box;
-  width: 1600px;
   min-height: 665px;
   padding-top: 275px;
-  padding-left: 260px;
-  background-color: #e8e8e8;
-  background-image: url(../img/Main-slider-1.jpg);
+  background: #e8e8e8 url(../img/Main-slider-1.jpg) no-repeat center center;
 }
 
 .main-slider p {
   position: relative;
   width: 500px;
-  margin: 0;
   padding-left: 24px;
   color: #222222;
   font-size: 40px;
@@ -357,6 +356,7 @@ button:active {
   width: 261px;
   min-height: 364px;
   margin-bottom: 40px;
+  text-align: left;
 }
 
 .products-list-item:hover {
@@ -387,8 +387,11 @@ button:active {
   background-color: rgba(58, 56, 56, 0.83);
 }
 
-.buy-shadow .products-buy {
-  display: inline-block;
+.products-buy {
+  position: absolute;
+  top: 94px;
+  left: 70px;
+  display: none;
   padding: 15px;
   padding-left: 43px;
   color: white;
@@ -396,8 +399,16 @@ button:active {
   border: 1px solid white;
 }
 
+.products-buy:hover {
+  color: #f16d7f;
+}
+
 .products-list-item:hover .buy-shadow {
   display: block;
+}
+
+.products-list-item:hover .products-buy {
+  display: inline-block;
 }
 
 .products .browse-all-button {
@@ -485,13 +496,13 @@ button:active {
 /*Подписка*/
 
 .subscribe {
-  height: 438px;
-  background: url(../img/subscribe-background.jpg);
+  min-height: 438px;
+  background: #e8e8e8 url(../img/subscribe-background.jpg) no-repeat center;
 }
 
 .subscribe .container {
+  margin: 0 auto;
   display: flex;
-  height: 100%
 }
 
 .subscribe-left {
@@ -810,6 +821,7 @@ button:active {
 }
 
 .item-in-cart h3 {
+  color: #222222;
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
@@ -915,3 +927,280 @@ a.go-to-cart:hover {
 .modal-drop-down a:hover {
   color: #f16d7f;
 }
+
+/*Страница товара*/
+
+.item-page {
+  color: #222222;
+  font-family: "Lato", Arial, sans-serif;
+  font-size: 14px;
+  background-color: white;
+}
+
+.new-arrivals {
+  background-color: #f8f3f4;
+}
+
+.new-arrivals .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.new-arrivals-title {
+  color: #f16d7f;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+/*Хлебные крошки*/
+
+.breadcrumbs a {
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #636363;
+  font-weight: 300;
+}
+
+a.current-breadcrumb {
+  font-weight: 700;
+  color: #f16d7f;
+}
+
+/*Слайдер товара*/
+
+.item-slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 777px;
+  background-color: #f7f7f7;
+  border: 1px solid #eaeaea;
+}
+
+.slider-control {
+  width: 47px;
+  height: 47px;
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 24px;
+  background-color: #d8d8d8;
+  border: none;
+}
+
+/*Описание товара*/
+
+.product-description {
+  min-height: 730px;
+  border: 1px solid #eaeaea;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.product-description h2 {
+  color: #f16d7f;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.product-description h3 {
+  color: #4d4d4d;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.product-description p {
+  width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #5e5e5e;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.product-description .character {
+  color: #b9b9b9;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.product-description .first-character {
+  margin-right: 44px;
+}
+
+.character b {
+  color: #2f2f2f;
+}
+
+.product-description .price {
+  color: #ef5b70;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.product-description-form {
+  width: 642px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 60px;
+  border-top: 1px solid #eaeaea;
+}
+
+.product-description-form .form-columns {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  margin-bottom: 28px;
+}
+
+.form-columns li {
+  width: 144px;
+}
+
+.form-columns p {
+  color: #2f2f2f;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.form-columns select[name="colors"],
+.form-columns select[name="size"],
+.form-columns input[type="number"] {
+  box-sizing: border-box;
+  width: 142px;
+  height: 33px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #bcbcbc;
+  font-size: 13px;
+  line-height: 24px;
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+}
+
+.product-description-form button[type="submit"] {
+  width: 537px;
+  height: 55px;
+  padding-left: 40px;
+  color: #ef5b70;
+  font-size: 16px;
+  font-weight: 700;
+  background: #ffffff url(../img/icon-cart-red.svg) no-repeat 207px 16px;
+  border: 1px solid #ef5b70;
+}
+
+/*Вам также может понравиться*/
+
+.also-like {
+  min-height: 645px;
+  padding-top: 115px;
+}
+
+.also-like h2 {
+  color: #4d4d4d;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.also-like .products-list {
+  margin-top: 70px;
+}
+
+
+
+/*Страница каталога*/
+
+.catalog-page {
+  color: #222222;
+  font-family: "Lato", Arial, sans-serif;
+  font-size: 14px;
+  background-color: white;
+}
+
+.catalog-page main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.categories-nav {
+  width: 243px;
+}
+
+.main-right {
+  width: 846px;
+}
+
+.catalog-form-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog-form-column {
+  width: 261px;
+}
+
+.trending-now-list,
+.size-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.trending-now-list li,
+.size-list li {
+  display: inline-block;
+}
+
+.pagination {
+  float: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 261px;
+  height: 44px;
+}
+
+.catalog-view-all {
+  float: right;
+  width: 150px;
+  height: 44px;
+}
+
+.features-mini {
+  min-height: 341px;
+  background-color: #222224;
+  color: #ffffff;
+}
+
+.features-mini ul {
+	display: flex;
+  justify-content: space-between;
+}
+
+.features-mini li {
+	width: 310px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
