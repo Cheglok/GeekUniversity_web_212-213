@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Brand</title>
+  <title>Catalog</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -13,7 +13,7 @@
   <header class="main-header">
     <div class="header-header container">
       <div class="header-left">
-        <a class="logo" href="#"><img src="img/logo.png" width="164" height="51" alt="Brands-shop"></a>
+        <a class="logo" href="index.html"><img src="img/logo.png" width="59" height="51" alt="Brands-shop"><span>Bran<b>d</b></span></a>
         <form class="header-form" action="#">
           <select class="header-form-select">
             <option selected>Browse</option>
@@ -50,7 +50,7 @@
 
   <nav class="main-navigation">
     <ul class="container">
-      <li><a href="#">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="#">Man</a></li>
       <li><a href="#">Women</a></li>
       <li><a href="#">Kids</a></li>
@@ -64,14 +64,14 @@
     <div class="container">
       <h2 class="new-arrivals-title">New arrivals</h2>
       <div class="breadcrumbs">
-        <a href="#">Home</a> / <a href="#">Men</a> / <a href="#" class="current-breadcrumb">New arrivals</a>
+        <a href="index.html">Home</a> / <a href="#">Men</a> / <a href="#" class="current-breadcrumb">New arrivals</a>
       </div>
     </div>
   </div>
 
   <main class=container>
     <nav class="categories-nav">
-      <details>
+      <details open>
         <summary>Category</summary>
         <ul>
           <li>Accessories</li>
@@ -91,9 +91,23 @@
       </details>
       <details>
         <summary>Brand</summary>
+        <ul>
+          <li>Accessories</li>
+          <li>Bags</li>
+          <li>Denim</li>
+          <li>Hoodies &amp; Sweatshirts</li>
+          <li>Jackets &amp; Coats</li>
+          <li>Pants</li>
+          <li>Polos</li>
+        </ul>
       </details>
       <details>
         <summary>Designer</summary>
+        <ul>
+          <li>Accessories</li>
+          <li>Bags</li>
+          <li>Denim</li>
+        </ul>
       </details>
     </nav>
     <div class="main-right clearfix">
@@ -113,35 +127,62 @@
           <li class="catalog-form-column">
             <h4>Size</h4>
             <ul class="size-list">
-              <li><label><input type="checkbox">xxs</label></li>
-              <li><label><input type="checkbox">xs</label></li>
-              <li><label><input type="checkbox">s</label></li>
-              <li><label><input type="checkbox">m</label></li>
-              <li><label><input type="checkbox">l</label></li>
-              <li><label><input type="checkbox">xl</label></li>
-              <li><label><input type="checkbox">xxl</label></li>
+              <li>
+                <input type="checkbox" id="xxs" class="size-list-checkbox">
+                <label for="xxs">xxs</label>
+              </li>
+              <li>
+                <input type="checkbox" id="xs" class="size-list-checkbox">
+                <label for="xs">xs</label>
+              </li>
+              <li>
+                <input type="checkbox" id="s" class="size-list-checkbox">
+                <label for="s">s</label>
+              </li>
+              <li>
+                <input type="checkbox" id="m" class="size-list-checkbox" checked>
+                <label for="m">m</label>
+              </li>
+              <li>
+                <input type="checkbox" id="l" class="size-list-checkbox">
+                <label for="l">l</label>
+              </li>
+              <li>
+                <input type="checkbox" id="xl" class="size-list-checkbox">
+                <label for="xl">xl</label>
+              </li>
+              <li>
+                <input type="checkbox" id="xxl" class="size-list-checkbox">
+                <label for="xxl">xxl</label>
+              </li>
             </ul>
           </li>
           <li class="catalog-form-column">
             <h4>Price</h4>
-            <input type="range" min="0" max="700" step="1" value="52">
-            <span>$52</span>
-            <span>$400</span>
+            <div class="range-form">
+              <div class="range">
+                <div class="line">
+                  <div class="left-point"></div>
+                  <div class="current-line"></div>
+                  <div class="right-pointer"></div>
+                </div>
+              </div>
+              <div class="range-left-price">$52</div>
+              <div class="range-right-price">$400</div>
+            </div>
           </li>
         </ul>
-        <div class="catalog-form-bottom">
-          <p>Sort by<select>
-              <option value="name">Name</option>
-            </select><select>
-              <option value="show">09</option>
-            </select></p>
-          <p>Show</p>
+        <div class="catalog-form-bottom clearfix">
+          <span>Sort by</span>
+          <div class="catalog-form-select">Name</div>
+          <span>Show</span>
+          <div class="catalog-form-select">09</div>
         </div>
       </form>
 
       <ul class="products-list">
         <li class="products-list-item">
-          <a href="#">
+          <a href="#" class="product-list-item-link">
             <img width="261" height="280" src="img/product-item-13.jpg" alt="white t-shirt">
             <p>Mango People T-shirt<br><span>$52</span></p>
             <div class="buy-shadow"></div>
@@ -149,7 +190,7 @@
           <a href="" class="products-buy">Add to Cart</a>
         </li>
         <li class="products-list-item">
-          <a href="#">
+          <a href="#" class="product-list-item-link">
             <img width="261" height="280" src="img/product-item-14.jpg" alt="red blouse">
             <p>Mango People T-shirt<br><span>$52</span></p>
             <div class="buy-shadow"></div>
@@ -157,7 +198,7 @@
           <a href="" class="products-buy">Add to Cart</a>
         </li>
         <li class="products-list-item">
-          <a href="#">
+          <a href="#" class="product-list-item-link">
             <img width="261" height="280" src="img/product-item-3.jpg" alt="gray jacket">
             <p>Mango People T-shirt<br><span>$52</span></p>
             <div class="buy-shadow"></div>
@@ -165,7 +206,7 @@
           <a href="" class="products-buy">Add to Cart</a>
         </li>
         <li class="products-list-item">
-          <a href="#">
+          <a href="#" class="product-list-item-link">
             <img width="261" height="280" src="img/product-item-15.jpg" alt="dress with flowers">
             <p>Mango People T-shirt<br><span>$52</span></p>
             <div class="buy-shadow"></div>
@@ -173,7 +214,7 @@
           <a href="" class="products-buy">Add to Cart</a>
         </li>
         <li class="products-list-item">
-          <a href="#">
+          <a href="#" class="product-list-item-link">
             <img width="261" height="280" src="img/product-item-8.jpg" alt="stripped robe">
             <p>Mango People T-shirt<br><span>$52</span></p>
             <div class="buy-shadow"></div>
@@ -181,7 +222,7 @@
           <a href="" class="products-buy">Add to Cart</a>
         </li>
         <li class="products-list-item">
-          <a href="#">
+          <a href="#" class="product-list-item-link">
             <img width="261" height="280" src="img/product-item-16.jpg" alt="grey suit">
             <p>Mango People T-shirt<br><span>$52</span></p>
             <div class="buy-shadow"></div>
@@ -189,7 +230,7 @@
           <a href="" class="products-buy">Add to Cart</a>
         </li>
         <li class="products-list-item">
-          <a href="#">
+          <a href="#" class="product-list-item-link">
             <img width="261" height="280" src="img/product-item-6.jpg" alt="beige pants">
             <p>Mango People T-shirt<br><span>$52</span></p>
             <div class="buy-shadow"></div>
@@ -197,7 +238,7 @@
           <a href="" class="products-buy">Add to Cart</a>
         </li>
         <li class="products-list-item">
-          <a href="#">
+          <a href="#" class="product-list-item-link">
             <img width="261" height="280" src="img/product-item-17.jpg" alt="dark jacket and light shorts">
             <p>Mango People T-shirt<br><span>$52</span></p>
             <div class="buy-shadow"></div>
@@ -205,7 +246,7 @@
           <a href="" class="products-buy">Add to Cart</a>
         </li>
         <li class="products-list-item">
-          <a href="#">
+          <a href="#" class="product-list-item-link">
             <img width="261" height="280" src="img/product-item-18.jpg" alt="dark jacket and light shorts">
             <p>Mango People T-shirt<br><span>$52</span></p>
             <div class="buy-shadow"></div>
@@ -214,16 +255,16 @@
         </li>
       </ul>
       <ul class="pagination">
-        <li><a href=""><i class="fas fa-angle-left"></i></a></li>
-        <li><a href="">1</a></li>
-        <li><a href="">2</a></li>
-        <li><a href="">3</a></li>
-        <li><a href="">4</a></li>
-        <li><a href="">5</a></li>
-        <li><a href="">6</a></li>
-        <li><a href="">...</a></li>
-        <li><a href="">20</a></li>
-        <li><a href=""><i class="fas fa-angle-right"></i></a></li>
+        <li><a href="#"><i class="fas fa-angle-left"></i></a></li>
+        <li><a href="#" class="pagination-current">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">6</a></li>
+        <li><a href="#">...</a></li>
+        <li><a href="#">20</a></li>
+        <li><a href="#"><i class="fas fa-angle-right"></i></a></li>
       </ul>
       <button type="button" class="catalog-view-all">View all</button>
     </div>
@@ -276,7 +317,7 @@
     <div class="footer-top">
       <div class="container">
         <div class="footer-column">
-          <a href="#"><img class="logo" src="img/logo.png" width="164" height="51" alt="Brands-shop"></a>
+          <a class="logo" href="#"><img src="img/logo.png" width="59" height="51" alt="Brands-shop"><span>Bran<b>d</b></span></a>
           <p>Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate multidisciplinary materials before go&nbsp;forward benefits. Intrinsicly syndicate an&nbsp;expanded array of&nbsp;processes and cross-unit partnerships.</p>
 
           <p>Efficiently plagiarize 24/365 action items and focused infomediaries.
@@ -286,7 +327,7 @@
         <div class="footer-column">
           <h4>Company</h4>
           <ul>
-            <li><a href="">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="">Shop</a></li>
             <li><a href="">About</a></li>
             <li><a href="">How it&nbsp;works</a></li>
