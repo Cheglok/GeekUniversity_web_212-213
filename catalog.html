@@ -13,53 +13,252 @@
   <header class="main-header">
     <div class="header-header container">
       <div class="header-left">
-        <a class="logo" href="index.html"><img src="img/logo.png" width="59" height="51" alt="Brands-shop"><span>Bran<b>d</b></span></a>
+        <a class="logo" href="#"><img src="img/logo.png" width="59" height="51" alt="Brands-shop"><span>Bran<b>d</b></span></a>
         <form class="header-form" action="#">
-          <select class="header-form-select">
-            <option selected>Browse</option>
-            <optgroup label="Women">
-              <option>Dresses</option>
-              <option>Tops</option>
-              <option>Sweaters/Knits</option>
-              <option>Jackets/Coats</option>
-              <option>Blazers</option>
-              <option>Denim</option>
-              <option>Leggings/Pants</option>
-              <option>Skirts/Shorts</option>
-              <option>Accessories </option>
-            </optgroup>
-            <optgroup label="Men">
-              <option> Tees/Tank tops</option>
-              <option>Shirts/Polos</option>
-              <option>Sweaters</option>
-              <option>Sweatshirts/Hoodies</option>
-              <option>Blazers</option>
-              <option>Jackets/vests</option>
-            </optgroup>
-          </select>
+          <div class="header-form-select">
+            Browse
+            <div class=" modal modal-drop-down">
+              <h2>Women</h2>
+              <ul>
+                <li><a href="catalog.html">Dresses</a></li>
+                <li><a href="catalog.html">Tops</a></li>
+                <li><a href="catalog.html">Sweaters/Knits</a></li>
+                <li><a href="catalog.html">Jackets/Coats</a></li>
+                <li><a href="catalog.html">Blazers</a></li>
+                <li><a href="catalog.html">Denim</a></li>
+                <li><a href="catalog.html">Leggings/Pants</a></li>
+                <li><a href="catalog.html">Skirts/Shorts</a></li>
+                <li><a href="catalog.html">Accessories </a></li>
+              </ul>
+              <h2>Man</h2>
+              <ul>
+                <li><a href="catalog.html">Tees/Tank tops</a></li>
+                <li><a href="catalog.html">Shirts/Polos</a></li>
+                <li><a href="catalog.html">Sweaters</a></li>
+                <li><a href="catalog.html">Sweatshirts/Hoodies</a></li>
+                <li><a href="catalog.html">Blazers</a></li>
+                <li><a href="catalog.html">Jackets/vests</a></li>
+              </ul>
+            </div>
+          </div>
           <input type="text" placeholder="Search for Item...">
           <button type="submit"><span class="visually-hidden">Найти</span><i class="fas fa-search"></i></button>
         </form>
       </div>
       <div class="header-right">
-        <a href="" class="cart-button"><span class="visually-hidden">Cart</span></a>
+        <div class="cart-wrapper">
+          <a href="shopping-cart.html" class="cart-button"><span class="visually-hidden">Cart</span></a>
+          <div class="modal modal-cart">
+            <a href="item.html" class="item-in-cart">
+              <img src="img/item-in-cart-1.jpg" width="72" height="85" alt="green man's t-shirt">
+              <div class="description">
+                <h3>Reboxzane</h3>
+                <div class="rating-stars"><span class="visually-hidden"> 4,5 stars</span></div>
+                <span>1&nbsp;x $250</span>
+              </div>
+              <i class="fa fa-times-circle" aria-hidden="true"></i>
+            </a>
+            <a href="item.html" class="item-in-cart">
+              <img src="img/item-in-cart-2.jpg" width="72" height="85" alt="white women's t-shirt">
+              <div class="description">
+                <h3>Reboxzane</h3>
+                <div class="rating-stars"><span class="visually-hidden"> 4,5 stars</span></div>
+                <span>1&nbsp;x $250</span>
+              </div>
+              <i class="fa fa-times-circle" aria-hidden="true"></i>
+            </a>
+            <p class="total-price"><b>Total</b><b>$500.00</b></p>
+            <a href="checkout.html" class="checkout-button">Checkout</a>
+            <a href="shopping-cart.html" class="go-to-cart">Go&nbsp;to&nbsp;cart</a>
+          </div>
+        </div>
         <a class="account-button" href="#">My&nbsp;account</a>
       </div>
     </div>
+
+    <nav class="main-navigation">
+      <ul class="main-navigation-list container">
+        <li class="main-navigation-item">
+          <a class="mega-menu-link" href="#">Home</a></li>
+        <li class="main-navigation-item">
+          <a class="mega-menu-link" href="catalog.html">Man</a>
+          <div class="modal modal-mega-menu">
+            <div class="mega-menu-column">
+              <h3>Women</h3>
+              <ul>
+                <li><a href="catalog.html">Dresses</a></li>
+                <li><a href="catalog.html">Tops</a></li>
+                <li><a href="catalog.html">Sweaters/Knits</a></li>
+                <li><a href="catalog.html">Jackets/Coats</a></li>
+                <li><a href="catalog.html">Blazers</a></li>
+                <li><a href="catalog.html">Denim</a></li>
+                <li><a href="catalog.html">Leggings/Pants</a></li>
+                <li><a href="catalog.html">Skirts/Shorts</a></li>
+                <li><a href="catalog.html">Accessories</a></li>
+              </ul>
+            </div>
+            <div class="mega-menu-column">
+              <h3>Women</h3>
+              <ul>
+                <li><a href="catalog.html">Dresses</a></li>
+                <li><a href="catalog.html">Tops</a></li>
+                <li><a href="catalog.html">Sweaters/Knits</a></li>
+                <li><a href="catalog.html">Jackets/Coats</a></li>
+              </ul>
+              <h3>Women</h3>
+              <ul>
+                <li><a href="catalog.html">Dresses</a></li>
+                <li><a href="catalog.html">Tops</a></li>
+                <li><a href="catalog.html">Sweaters/Knits</a></li>
+              </ul>
+            </div>
+            <div class="mega-menu-column">
+              <h3>Women</h3>
+              <ul>
+                <li><a href="catalog.html">Dresses</a></li>
+                <li><a href="catalog.html">Tops</a></li>
+                <li><a href="catalog.html">Sweaters/Knits</a></li>
+                <li><a href="catalog.html">Jackets/Coats</a></li>
+              </ul>
+              <img src="img/mega-menu.jpg" width="255" height="118" alt="sharp dressed man">
+            </div>
+          </div>
+        </li>
+        <li class="main-navigation-item">
+          <a class="mega-menu-link" href="catalog.html">Women</a>
+          <div class="modal modal-mega-menu">
+            <div class="mega-menu-column">
+              <h3>Women</h3>
+              <ul>
+                <li><a href="catalog.html">Dresses</a></li>
+                <li><a href="catalog.html">Tops</a></li>
+                <li><a href="catalog.html">Sweaters/Knits</a></li>
+                <li><a href="catalog.html">Jackets/Coats</a></li>
+                <li><a href="catalog.html">Blazers</a></li>
+                <li><a href="catalog.html">Denim</a></li>
+                <li><a href="catalog.html">Leggings/Pants</a></li>
+                <li><a href="catalog.html">Skirts/Shorts</a></li>
+                <li><a href="catalog.html">Accessories</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="main-navigation-item">
+          <a class="mega-menu-link" href="catalog.html">Kids</a>
+          <div class="modal modal-mega-menu">
+            <div class="mega-menu-column">
+              <h3>Women</h3>
+              <ul>
+                <li><a href="catalog.html">Dresses</a></li>
+                <li><a href="catalog.html">Tops</a></li>
+                <li><a href="catalog.html">Sweaters/Knits</a></li>
+                <li><a href="catalog.html">Jackets/Coats</a></li>
+                <li><a href="catalog.html">Blazers</a></li>
+                <li><a href="catalog.html">Denim</a></li>
+                <li><a href="catalog.html">Leggings/Pants</a></li>
+                <li><a href="catalog.html">Skirts/Shorts</a></li>
+                <li><a href="catalog.html">Accessories</a></li>
+              </ul>
+            </div>
+            <div class="mega-menu-column">
+              <h3>Women</h3>
+              <ul>
+                <li><a href="catalog.html">Dresses</a></li>
+                <li><a href="catalog.html">Tops</a></li>
+                <li><a href="catalog.html">Sweaters/Knits</a></li>
+                <li><a href="catalog.html">Jackets/Coats</a></li>
+              </ul>
+              <img src="img/mega-menu.jpg" width="255" height="118" alt="sharp dressed man">
+            </div>
+          </div>
+        </li>
+        <li class="main-navigation-item">
+          <a class="mega-menu-link" href="catalog.html">Accoseriese</a>
+          <div class="modal modal-mega-menu">
+            <div class="mega-menu-column">
+              <h3>Women</h3>
+              <ul>
+                <li><a href="catalog.html">Dresses</a></li>
+                <li><a href="catalog.html">Tops</a></li>
+                <li><a href="catalog.html">Sweaters/Knits</a></li>
+                <li><a href="catalog.html">Jackets/Coats</a></li>
+              </ul>
+              <h3>Women</h3>
+              <ul>
+                <li><a href="catalog.html">Dresses</a></li>
+                <li><a href="catalog.html">Tops</a></li>
+                <li><a href="catalog.html">Sweaters/Knits</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="main-navigation-item">
+          <a class="mega-menu-link" href="catalog.html">featured</a>
+          <div class="modal modal-mega-menu modal-mega-menu-right">
+            <div class="mega-menu-column">
+              <h3>Women</h3>
+              <ul>
+                <li><a href="catalog.html">Dresses</a></li>
+                <li><a href="catalog.html">Tops</a></li>
+                <li><a href="catalog.html">Sweaters/Knits</a></li>
+                <li><a href="catalog.html">Jackets/Coats</a></li>
+                <li><a href="catalog.html">Blazers</a></li>
+                <li><a href="catalog.html">Denim</a></li>
+                <li><a href="catalog.html">Leggings/Pants</a></li>
+                <li><a href="catalog.html">Skirts/Shorts</a></li>
+                <li><a href="catalog.html">Accessories</a></li>
+              </ul>
+            </div>
+            <div class="mega-menu-column">
+              <h3>Women</h3>
+              <ul>
+                <li><a href="catalog.html">Dresses</a></li>
+                <li><a href="catalog.html">Tops</a></li>
+                <li><a href="catalog.html">Sweaters/Knits</a></li>
+                <li><a href="catalog.html">Jackets/Coats</a></li>
+              </ul>
+              <h3>Women</h3>
+              <ul>
+                <li><a href="catalog.html">Dresses</a></li>
+                <li><a href="catalog.html">Tops</a></li>
+                <li><a href="catalog.html">Sweaters/Knits</a></li>
+              </ul>
+            </div>
+            <div class="mega-menu-column">
+              <h3>Women</h3>
+              <ul>
+                <li><a href="catalog.html">Dresses</a></li>
+                <li><a href="catalog.html">Tops</a></li>
+                <li><a href="catalog.html">Sweaters/Knits</a></li>
+                <li><a href="catalog.html">Jackets/Coats</a></li>
+              </ul>
+              <img src="img/mega-menu.jpg" width="255" height="118" alt="sharp dressed man">
+            </div>
+          </div>
+        </li>
+        <li class="main-navigation-item">
+          <a class="mega-menu-link" href="catalog.html">Hot Deals</a>
+          <div class="modal modal-mega-menu  modal-mega-menu-right">
+            <div class="mega-menu-column">
+              <h3>Women</h3>
+              <ul>
+                <li><a href="catalog.html">Dresses</a></li>
+                <li><a href="catalog.html">Tops</a></li>
+                <li><a href="catalog.html">Sweaters/Knits</a></li>
+                <li><a href="catalog.html">Jackets/Coats</a></li>
+                <li><a href="catalog.html">Blazers</a></li>
+                <li><a href="catalog.html">Denim</a></li>
+                <li><a href="catalog.html">Leggings/Pants</a></li>
+                <li><a href="catalog.html">Skirts/Shorts</a></li>
+                <li><a href="catalog.html">Accessories</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
   </header>
-
-  <nav class="main-navigation">
-    <ul class="container">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="#">Man</a></li>
-      <li><a href="#">Women</a></li>
-      <li><a href="#">Kids</a></li>
-      <li><a href="#">Accoseriese</a></li>
-      <li><a href="#">featured</a></li>
-      <li><a href="#">Hot Deals</a></li>
-    </ul>
-  </nav>
-
+  
   <div class="new-arrivals">
     <div class="container">
       <h2 class="new-arrivals-title">New arrivals</h2>
