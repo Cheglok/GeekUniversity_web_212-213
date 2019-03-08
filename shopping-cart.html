@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Shopping-cart</title>
@@ -7,9 +8,10 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
+
 <body>
-<h1>КОРЗИНА</h1>
-    <header class="main-header">
+  <h1 class="visually-hidden">КОРЗИНА</h1>
+  <header class="main-header">
     <div class="header-header container">
       <div class="header-left">
         <a class="logo" href="index.html"><img src="img/logo.png" width="59" height="51" alt="Brands-shop"><span>Bran<b>d</b></span></a>
@@ -272,6 +274,108 @@
     </div>
   </div>
 
+  <section class="basket-contents">
+    <div class="container">
+      <h2 class="visually-hidden">Basket-contents</h2>
+      <table class="basket-contents-table">
+        <tr>
+          <th>Product details</th>
+          <th>Unite price</th>
+          <th>Quantity</th>
+          <th>Shipping</th>
+          <th>Subtotal</th>
+          <th>Action</th>
+        </tr>
+        <tr>
+          <td class="basket-contents-item">
+            <img src="img/product-item-13.jpg" alt="T-shirt" width="100" height="115">
+            <h4>Mango people t-shirt</h4>
+            <div class="rating-stars"></div>
+            <p>Color:<span class="value">Red</span></p>
+            <p>Size:<span class="value">XLL</span></p>
+          </td>
+          <td>$150</td>
+          <td><input type="text" step="1" value="2"></td>
+          <td>Free</td>
+          <td>$300</td>
+          <td>
+            <i class="fa fa-times-circle" aria-hidden="true"></i><span class="visually-hidden">Delete item from cart</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="basket-contents-item">
+            <img src="img/product-item-14.jpg" alt="T-shirt" width="100" height="115">
+            <h4>Mango people t-shirt</h4>
+            <div class="rating-stars"></div>
+            <p>Color:<span class="value">Red</span></p>
+            <p>Size:<span class="value">XLL</span></p>
+          </td>
+          <td>$150</td>
+          <td><input type="text" step="1" value="2"></td>
+          <td>Free</td>
+          <td>$300</td>
+          <td>
+            <i class="fa fa-times-circle" aria-hidden="true"></i><span class="visually-hidden">Delete item from cart</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="basket-contents-item">
+            <img src="img/product-item-19.jpg" alt="T-shirt" width="100" height="115">
+            <h4>Mango people t-shirt</h4>
+            <div class="rating-stars"></div>
+            <p>Color:<span class="value">Red</span></p>
+            <p>Size:<span class="value">XLL</span></p>
+          </td>
+          <td>$150</td>
+          <td><input type="text" step="1" value="2"></td>
+          <td>Free</td>
+          <td>$300</td>
+          <td>
+            <i class="fa fa-times-circle" aria-hidden="true"></i><span class="visually-hidden">Delete item from cart</span>
+          </td>
+        </tr>
+      </table>
+      <div class="basket-contents-buttons clearfix">
+        <button type="button" class="button-clear-basket">Clear shipping cart</button>
+        <button type="button" class="button-continue">Continue Shopping</button>
+      </div>
+      <form class="shipping-form" action="#">
+        <ul>
+          <li class="shipping-form-column">
+            <h3>Shipping address</h3>
+            <select name="City" id="City">
+              <option value="Bangladesh">Bangladesh</option>
+              <option value="Moscow">Moscow</option>
+            </select>
+            <input type="text" placeholder="State" id="state">
+            <input type="text" placeholder="Postcode/Zip" id="postcode">
+            <button class="button-get-quote">Get a quote</button>
+          </li>
+          <li class="shipping-form-column">
+            <h3>Coupon discount</h3>
+            <p>Enter your coupon code if you have one</p>
+            <input type="text" placeholder="State" id="coupon">
+            <button class="button-apply-coupon">Apply coupon</button>
+          </li>
+          <li class="shipping-form-column total-column">
+            <p class="sub-total-price">Sub total<span>$900</span></p>
+            <p class="grand-total-price">Grand Total<span>$900</span></p>
+            <a href="checkout.html" class="button-proceed-to-checkout">Proceed to checkout</a>
+          </li>
+        </ul>
+      </form>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
   <section class="subscribe">
     <div class="container clearfix">
       <div class="subscribe-left">
@@ -295,7 +399,7 @@
   </section>
 
   <footer class="main-footer">
-      <div class="footer-top">
+    <div class="footer-top">
       <div class="container">
         <div class="footer-column">
           <a class="logo" href="#"><img src="img/logo.png" width="59" height="51" alt="Brands-shop"><span>Bran<b>d</b></span></a>
@@ -308,7 +412,7 @@
         <div class="footer-column">
           <h4>Company</h4>
           <ul>
-            <li><a class="footer-column-link"  href="#">Home</a></li>
+            <li><a class="footer-column-link" href="#">Home</a></li>
             <li><a class="footer-column-link" href="catalog.html">Shop</a></li>
             <li><a class="footer-column-link" href="#">About</a></li>
             <li><a class="footer-column-link" href="#">How it&nbsp;works</a></li>
@@ -349,7 +453,8 @@
         </ul>
       </div>
     </div>
-  </footer>  
-  
+  </footer>
+
 </body>
+
 </html>
