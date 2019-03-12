@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Checkout</title>
@@ -7,9 +8,10 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
+
 <body>
-<h1>Checkout</h1>
-    <header class="main-header">
+  <h1 class="visually-hidden">Checkout</h1>
+  <header class="main-header">
     <div class="header-header container">
       <div class="header-left">
         <a class="logo" href="index.html"><img src="img/logo.png" width="59" height="51" alt="Brands-shop"><span>Bran<b>d</b></span></a>
@@ -49,7 +51,7 @@
 
       <div class="header-right">
         <div class="cart-wrapper">
-          <a href="shopping-cart.html" class="cart-button cart-fill"><span class="visually-hidden">Cart</span></a>
+          <a href="shopping-cart.html" class="cart-button"><span class="visually-hidden">Cart</span></a>
 
           <div class="modal modal-cart">
             <a href="item.html" class="item-in-cart">
@@ -85,7 +87,7 @@
         <li class="main-navigation-item">
           <a class="mega-menu-link" href="index.html">Home</a></li>
         <li class="main-navigation-item">
-          <a class="mega-menu-link mega-menu-link-current" href="catalog.html">Man</a>
+          <a class="mega-menu-link" href="catalog.html">Man</a>
           <div class="modal modal-mega-menu">
             <div class="mega-menu-column">
               <h3>Women</h3>
@@ -129,7 +131,7 @@
           </div>
         </li>
         <li class="main-navigation-item">
-          <a class="mega-menu-link" href="catalog.html">Women</a>
+          <a class="mega-menu-link mega-menu-link-current" href="catalog.html">Women</a>
           <div class="modal modal-mega-menu">
             <div class="mega-menu-column">
               <h3>Women</h3>
@@ -272,30 +274,103 @@
     </div>
   </div>
 
+  <main class="checkout-main container">
+    <details class="checkout-section clearfix" open>
+      <summary>
+        <h2 class="checkout-section__heading">01. Shipping adress</h2>
+      </summary>
+      <form action="#" class="checkout-section__check-form">
+        <h3 class="check-form__heading">Check as a guest or register</h3>
+        <p class="check-form__paragraph">Register with us for future convenience</p>
+          <input class="check-form__radio-input visually-hidden" type="radio" name="radio-checkout" id="radio-checkout">
+        <label class="check-form__radio-label" for="radio-checkout">
+          Checkout as guest
+        </label>
+          <input class="check-form__radio-input visually-hidden" type="radio" name="radio-checkout" id="radio-guest" checked>
+        <label class="check-form__radio-label" for="radio-guest">
+          Register
+        </label>
+        <h3 class="check-form__heading">Register and save time!</h3>
+        <p class="check-form__paragraph">Register with us for future convenience</p>
+        <ul class="check-form__features-list">
+          <li class="features-list__item"><i class="fas fa-angle-double-right"></i>Fast and easy checkout</li>
+          <li class="features-list__item"><i class="fas fa-angle-double-right"></i>Easy access to your order history and status</li>
+        </ul>
+        <button class="check-form__button" type="submit">Continue</button>
+      </form>
+      <form action="#" class="checkout-section__login-form">
+        <h3 class="login-form__heading">Already registed?</h3>
+        <p class="login-form__paragraph">Please log in below</p>
+        <label class="login-form__label">
+          Email address<span>*</span>
+          <input class="login-form__input-email" type="email" name="login-email" id="login-email">
+        </label>
+        <label class="login-form__label">
+          Password<span>*</span>
+          <input class="login-form__input-password" type="password" name="login-password" id="login-password">
+        </label>
+        <p class="login-form__attention"><span>*</span> Required fileds</p>
+        <button class="login-form__button" type="submit">Log in</button>
+        <a href="#" class="login-form__link-forgot">Forgot password?</a>
+      </form>
+    </details>
+    <details class="checkout-section">
+      <summary><h2 class="checkout-section__heading">02. Billing information</h2></summary>
+      Content
+    </details>
+    <details class="checkout-section">
+      <summary><h2 class="checkout-section__heading">03. Shipping information</h2></summary>
+      Content
+    </details>
+    <details class="checkout-section">
+      <summary><h2 class="checkout-section__heading">04. Shipping method</h2></summary>
+      Content
+    </details>
+    <details class="checkout-section">
+      <summary><h2 class="checkout-section__heading">05. Payment method</h2></summary>
+      Content
+    </details>
+    <details class="checkout-section">
+      <summary><h2 class="checkout-section__heading">06. Order review</h2></summary>
+      Content
+    </details>
+  </main>
+
+
+
+
+
+
+
+
+
+
   <section class="subscribe">
-    <div class="container clearfix">
-      <div class="subscribe-left">
-        <q>Vestibulum quis porttitor dui! Quisque viverra nunc&nbsp;mi,
-          a&nbsp;pulvinar purus condimentum&nbsp;a. Aliquam condimentum mattis neque sed pretium</q> <br>
-        <span class="subscribe-quote-autor">Bin Burhan</span> <br>
-        <span class="subscribe-quote-address">Dhaka, Bd</span> <br>
-        <div class="white-rect"></div>
-        <div class="red-rect"></div>
-        <div class="white-rect"></div>
-      </div>
-      <div class="subscribe-right">
-        <h2>Subscribe</h2>
-        <p>for our newletter and promotion</p>
-        <form class="subscribe-form" action="#">
-          <input type="email" name="subscribe-email" class="subscribe-email" placeholder="Enter Your Email">
-          <button type="submit" class="subscribe-submit">Subscribe</button>
-        </form>
+    <div class="container">
+      <div class="subscribe-wrapper">
+        <div class="subscribe-left">
+          <q>Vestibulum quis porttitor dui! Quisque viverra nunc&nbsp;mi,
+            a&nbsp;pulvinar purus condimentum&nbsp;a. Aliquam condimentum mattis neque sed pretium</q> <br>
+          <span class="subscribe-quote-autor">Bin Burhan</span> <br>
+          <span class="subscribe-quote-address">Dhaka, Bd</span> <br>
+          <div class="white-rect"></div>
+          <div class="red-rect"></div>
+          <div class="white-rect"></div>
+        </div>
+        <div class="subscribe-right">
+          <h2>Subscribe</h2>
+          <p>for our newletter and promotion</p>
+          <form class="subscribe-form" action="#">
+            <input type="email" name="subscribe-email" class="subscribe-email" placeholder="Enter Your Email">
+            <button type="submit" class="subscribe-submit">Subscribe</button>
+          </form>
+        </div>
       </div>
     </div>
   </section>
 
   <footer class="main-footer">
-      <div class="footer-top">
+    <div class="footer-top">
       <div class="container">
         <div class="footer-column">
           <a class="logo" href="index.html"><img src="img/logo.png" width="59" height="51" alt="Brands-shop"><span>Bran<b>d</b></span></a>
@@ -308,7 +383,7 @@
         <div class="footer-column">
           <h4>Company</h4>
           <ul>
-            <li><a class="footer-column-link"  href="#">Home</a></li>
+            <li><a class="footer-column-link" href="#">Home</a></li>
             <li><a class="footer-column-link" href="catalog.html">Shop</a></li>
             <li><a class="footer-column-link" href="#">About</a></li>
             <li><a class="footer-column-link" href="#">How it&nbsp;works</a></li>
@@ -350,7 +425,12 @@
       </div>
     </div>
   </footer>
-  
+  <div class="foll-animation hat-foll-animation"></div>
+  <div class="foll-animation sock-foll-animation"></div>
+  <div class="foll-animation dress-foll-animation"></div>
+  <div class="foll-animation jeans-foll-animation"></div>
+  <div class="text-animation">You must buy!</div>
+
 </body>
-</html>
+
 </html>
