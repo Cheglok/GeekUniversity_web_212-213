@@ -1301,6 +1301,12 @@ a.current-breadcrumb {
   border: 1px solid #eaeaea;
 }
 
+.form-columns select[name="colors"]:hover,
+.form-columns select[name="size"]:hover,
+.form-columns input[type="number"]:hover {
+  border: 1px solid #ef5b70;
+}
+
 .product-description-form button[type="submit"] {
   width: 537px;
   height: 55px;
@@ -1310,6 +1316,11 @@ a.current-breadcrumb {
   font-weight: 700;
   background: #ffffff url(../img/icon-cart-red.svg) no-repeat 207px 16px;
   border: 1px solid #ef5b70;
+}
+
+.product-description-form button[type="submit"]:hover {
+  background: #ef5b70 url(../img/icon-cart-white.svg) no-repeat 207px 16px;
+  color: #ffffff;
 }
 
 /*Вам также может понравиться*/
@@ -1750,7 +1761,7 @@ a.pagination-current {
   line-height: 20px;
 }
 
-.basket-contents-table input[type="text"] {
+.basket-contents-table input[type="number"] {
   width: 54px;
   height: 30px;
   border: 1px solid #eaeaea;
@@ -1829,6 +1840,11 @@ a.pagination-current {
   color: #b1b1b1;
   font-size: 13px;
   font-weight: 300;
+}
+
+.shipping-form-column select:hover,
+.shipping-form-column input:hover {
+  border: 1px solid #f16d7f;
 }
 
 .shipping-form-column button {
@@ -1975,7 +1991,7 @@ a.pagination-current {
   background-color: #fff;
   border: 2px solid black;
   top: 0px;
-  left: 10px;  
+  left: 10px;
 }
 
 .check-form__radio-input:checked + .check-form__radio-label::after {
@@ -1986,7 +2002,7 @@ a.pagination-current {
   border-radius: 50%;
   background-color: #000;
   top: 4px;
-  left: 14px;  
+  left: 14px;
 }
 
 .check-form__radio-input {
@@ -2263,42 +2279,42 @@ a.pagination-current {
 
   100% {
     bottom: 0px;
-    left 600px;
+    left: 600px;
   }
 }
 
-@keyframes textslide {
-  0% {
-    left: 0px;
-    opacity: 1;
-  }
+  @keyframes textslide {
+    0% {
+      left: 0px;
+      opacity: 1;
+    }
 
-  10% {
-    left: 50px;
-    color: greenyellow
-  }
+    10% {
+      left: 50px;
+      color: greenyellow
+    }
 
-  20% {
-    left: 100px;
-    transform: skewX(15deg) scale(2);
-  }
+    20% {
+      left: 100px;
+      transform: skewX(15deg) scale(2);
+    }
 
-  30% {
-    left: 400px;
-    transform: skewX(-15deg);
-  }
+    30% {
+      left: 400px;
+      transform: skewX(-15deg);
+    }
 
-  40% {
-    left: 800px;
-    color: aqua;
-  }
+    40% {
+      left: 800px;
+      color: aqua;
+    }
 
-  90% {
-    left: 1300px;
-    color: darkmagenta;
-  }
+    90% {
+      left: 1300px;
+      color: darkmagenta;
+    }
 
-  100% {
-    left: 1500px;
+    100% {
+      left: 1500px;
+    }
   }
-}
