@@ -10,6 +10,10 @@
 </head>
 
 <body>
+<div id="app">
+  <error
+    :error="errorMessage"
+  ></error>
   <h1 class="visually-hidden">КОРЗИНА</h1>
   <header class="main-header">
     <div class="header-header container">
@@ -49,31 +53,16 @@
 
       <div class="header-right">
         <div class="cart-wrapper">
-          <a href="shopping-cart.html" class="cart-button cart-fill"><span class="visually-hidden">Cart</span></a>
+          <button class="cart-button cart-fill" @click="isVisibleCart = !isVisibleCart">
+            <span class="visually-hidden">Cart</span>
+          </button>
 
-          <div class="modal modal-cart">
-            <a href="item.html" class="item-in-cart">
-              <img src="img/item-in-cart-1.jpg" width="72" height="85" alt="green man's t-shirt">
-              <div class="description">
-                <h3>Reboxzane</h3>
-                <div class="rating-stars"><span class="visually-hidden"> 4,5 stars</span></div>
-                <span>1&nbsp;x $250</span>
-              </div>
-              <i class="fa fa-times-circle" aria-hidden="true"></i>
-            </a>
-            <a href="item.html" class="item-in-cart">
-              <img src="img/item-in-cart-2.jpg" width="72" height="85" alt="white women's t-shirt">
-              <div class="description">
-                <h3>Reboxzane</h3>
-                <div class="rating-stars"><span class="visually-hidden"> 4,5 stars</span></div>
-                <span>1&nbsp;x $250</span>
-              </div>
-              <i class="fa fa-times-circle" aria-hidden="true"></i>
-            </a>
-            <p class="total-price"><b>Total</b><b>$500.00</b></p>
-            <a href="checkout.html" class="checkout-button">Checkout</a>
-            <a href="shopping-cart.html" class="go-to-cart">Go&nbsp;to&nbsp;cart</a>
-          </div>
+          <cart
+            :cart-items="productsBasket"
+            :visibility="isVisibleCart"
+            :total-price="totalPrice"
+            @remove="delProduct"
+          ></cart>
 
         </div>
         <a class="account-button" href="#">My&nbsp;account</a>
@@ -275,64 +264,68 @@
   <section class="basket-contents">
     <div class="container">
       <h2 class="visually-hidden">Basket-contents</h2>
-      <table class="basket-contents-table">
-        <tr>
-          <th>Product details</th>
-          <th>Unite price</th>
-          <th>Quantity</th>
-          <th>Shipping</th>
-          <th>Subtotal</th>
-          <th>Action</th>
-        </tr>
-        <tr>
-          <td class="basket-contents-item">
-            <img src="img/product-item-13.jpg" alt="T-shirt" width="100" height="115">
-            <h4>Mango people t-shirt</h4>
-            <div class="rating-stars"></div>
-            <p>Color:<span class="value">Red</span></p>
-            <p>Size:<span class="value">XLL</span></p>
-          </td>
-          <td>$150</td>
-          <td><input type="number" step="1" value="2"></td>
-          <td>Free</td>
-          <td>$300</td>
-          <td>
-            <i class="fa fa-times-circle" aria-hidden="true"></i><span class="visually-hidden">Delete item from cart</span>
-          </td>
-        </tr>
-        <tr>
-          <td class="basket-contents-item">
-            <img src="img/product-item-14.jpg" alt="T-shirt" width="100" height="115">
-            <h4>Mango people t-shirt</h4>
-            <div class="rating-stars"></div>
-            <p>Color:<span class="value">Red</span></p>
-            <p>Size:<span class="value">XLL</span></p>
-          </td>
-          <td>$150</td>
-          <td><input type="number" step="1" value="2"></td>
-          <td>Free</td>
-          <td>$300</td>
-          <td>
-            <i class="fa fa-times-circle" aria-hidden="true"></i><span class="visually-hidden">Delete item from cart</span>
-          </td>
-        </tr>
-        <tr>
-          <td class="basket-contents-item">
-            <img src="img/product-item-19.jpg" alt="T-shirt" width="100" height="115">
-            <h4>Mango people t-shirt</h4>
-            <div class="rating-stars"></div>
-            <p>Color:<span class="value">Red</span></p>
-            <p>Size:<span class="value">XLL</span></p>
-          </td>
-          <td>$150</td>
-          <td><input type="number" step="1" value="2"></td>
-          <td>Free</td>
-          <td>$300</td>
-          <td>
-            <i class="fa fa-times-circle" aria-hidden="true"></i><span class="visually-hidden">Delete item from cart</span>
-          </td>
-        </tr>
-      </table>
+      <shopping-cart
+        :products="productsBasket"
+        @remove="delProduct"
+      ></shopping-cart>
+<!--      <table class="basket-contents-table">-->
+<!--        <tr>-->
+<!--          <th>Product details</th>-->
+<!--          <th>Unite price</th>-->
+<!--          <th>Quantity</th>-->
+<!--          <th>Shipping</th>-->
+<!--          <th>Subtotal</th>-->
+<!--          <th>Action</th>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--          <td class="basket-contents-item">-->
+<!--            <img src="img/product-item-13.jpg" alt="T-shirt" width="100" height="115">-->
+<!--            <h4>Mango people t-shirt</h4>-->
+<!--            <div class="rating-stars"></div>-->
+<!--            <p>Color:<span class="value">Red</span></p>-->
+<!--            <p>Size:<span class="value">XLL</span></p>-->
+<!--          </td>-->
+<!--          <td>$150</td>-->
+<!--          <td><input type="number" step="1" value="2"></td>-->
+<!--          <td>Free</td>-->
+<!--          <td>$300</td>-->
+<!--          <td>-->
+<!--            <i class="fa fa-times-circle" aria-hidden="true"></i><span class="visually-hidden">Delete item from cart</span>-->
+<!--          </td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--          <td class="basket-contents-item">-->
+<!--            <img src="img/product-item-14.jpg" alt="T-shirt" width="100" height="115">-->
+<!--            <h4>Mango people t-shirt</h4>-->
+<!--            <div class="rating-stars"></div>-->
+<!--            <p>Color:<span class="value">Red</span></p>-->
+<!--            <p>Size:<span class="value">XLL</span></p>-->
+<!--          </td>-->
+<!--          <td>$150</td>-->
+<!--          <td><input type="number" step="1" value="2"></td>-->
+<!--          <td>Free</td>-->
+<!--          <td>$300</td>-->
+<!--          <td>-->
+<!--            <i class="fa fa-times-circle" aria-hidden="true"></i><span class="visually-hidden">Delete item from cart</span>-->
+<!--          </td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--          <td class="basket-contents-item">-->
+<!--            <img src="img/product-item-19.jpg" alt="T-shirt" width="100" height="115">-->
+<!--            <h4>Mango people t-shirt</h4>-->
+<!--            <div class="rating-stars"></div>-->
+<!--            <p>Color:<span class="value">Red</span></p>-->
+<!--            <p>Size:<span class="value">XLL</span></p>-->
+<!--          </td>-->
+<!--          <td>$150</td>-->
+<!--          <td><input type="number" step="1" value="2"></td>-->
+<!--          <td>Free</td>-->
+<!--          <td>$300</td>-->
+<!--          <td>-->
+<!--            <i class="fa fa-times-circle" aria-hidden="true"></i><span class="visually-hidden">Delete item from cart</span>-->
+<!--          </td>-->
+<!--        </tr>-->
+<!--      </table>-->
       <div class="basket-contents-buttons clearfix">
         <button type="button" class="button-clear-basket">Clear shopping cart</button>
         <button type="button" class="button-continue">Continue Shopping</button>
@@ -445,6 +438,12 @@
       </div>
     </div>
   </footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script defer src="js/ShoppingCartComponent.js"></script>
+<script defer src="js/BasketComponents.js"></script>
+<script defer src="js/errorComponents.js"></script>
+<script defer src="js/main.js"></script>
 
 </body>
 

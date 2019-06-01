@@ -10,6 +10,10 @@
 </head>
 
 <body>
+<div id="app">
+  <error
+    :error="errorMessage"
+  ></error>
   <h1 class="visually-hidden">Checkout</h1>
   <header class="main-header">
     <div class="header-header container">
@@ -51,31 +55,16 @@
 
       <div class="header-right">
         <div class="cart-wrapper">
-          <a href="shopping-cart.html" class="cart-button"><span class="visually-hidden">Cart</span></a>
+          <button class="cart-button cart-fill" @click="isVisibleCart = !isVisibleCart">
+            <span class="visually-hidden">Cart</span>
+          </button>
 
-          <div class="modal modal-cart">
-            <a href="item.html" class="item-in-cart">
-              <img src="img/item-in-cart-1.jpg" width="72" height="85" alt="green man's t-shirt">
-              <div class="description">
-                <h3>Reboxzane</h3>
-                <div class="rating-stars"><span class="visually-hidden"> 4,5 stars</span></div>
-                <span>1&nbsp;x $250</span>
-              </div>
-              <i class="fa fa-times-circle" aria-hidden="true"></i>
-            </a>
-            <a href="item.html" class="item-in-cart">
-              <img src="img/item-in-cart-2.jpg" width="72" height="85" alt="white women's t-shirt">
-              <div class="description">
-                <h3>Reboxzane</h3>
-                <div class="rating-stars"><span class="visually-hidden"> 4,5 stars</span></div>
-                <span>1&nbsp;x $250</span>
-              </div>
-              <i class="fa fa-times-circle" aria-hidden="true"></i>
-            </a>
-            <p class="total-price"><b>Total</b><b>$500.00</b></p>
-            <a href="checkout.html" class="checkout-button">Checkout</a>
-            <a href="shopping-cart.html" class="go-to-cart">Go&nbsp;to&nbsp;cart</a>
-          </div>
+          <cart
+            :cart-items="productsBasket"
+            :visibility="isVisibleCart"
+            :total-price="totalPrice"
+            @remove="delProduct"
+          ></cart>
 
         </div>
         <a class="account-button" href="#">My&nbsp;account</a>
@@ -426,6 +415,12 @@
       </div>
     </div>
   </footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script defer src="js/CatalogComponents.js"></script>
+<script defer src="js/BasketComponents.js"></script>
+<script defer src="js/errorComponents.js"></script>
+<script defer src="js/main.js"></script>
 
   <!--  смешная анимация, раскомментируй, чтобы упасть со стула-->
 <!--
