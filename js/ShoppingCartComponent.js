@@ -30,13 +30,12 @@ Vue.component('product', {
             <p>Size:<span class="value">XLL</span></p>
           </td>
           <td>\${{product.price}}</td>
-          <td><input type="number" step="1" :value="product.quantity"></td>
+          <td><input type="number" step="1" min="1" max="10" v-model.number="product.quantity"
+           @keydown.prevent = "$parent.$emit('validate(event)')"></td>
           <td>Free</td>
           <td>\${{product.price * product.quantity}}</td>
           <td>
-            <i class="fa fa-times-circle" aria-hidden="true" @click = "$parent.$emit('remove', cartItem)">
-              <span class="visually-hidden">Delete item from cart</span>
-            </i>
+            <i class="fa fa-times-circle" aria-hidden="true" @click = "$parent.$emit('remove', product)"></i>
             
           </td>
         </tr>`

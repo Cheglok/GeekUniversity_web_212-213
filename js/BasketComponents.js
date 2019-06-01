@@ -7,9 +7,11 @@ Vue.component('cart', {
               :key="product.id_product"
               :cart-item="product"
               ></item>
-              <p class="total-price" v-if="cartItems.length"><b>Total</b><b>\${{ totalPrice }}</b></p>
+              <div v-if="cartItems.length">
+              <p class="total-price"><b>Total</b><b>\${{ totalPrice }}</b></p>
               <a href="checkout.html" class="checkout-button">Checkout</a>
               <a href="shopping-cart.html" class="go-to-cart">Go&nbsp;to&nbsp;cart</a>
+              </div>
             </div>`
 });
 Vue.component('item', {

@@ -55,8 +55,9 @@
 
       <div class="header-right">
         <div class="cart-wrapper">
-          <button class="cart-button cart-fill" @click="isVisibleCart = !isVisibleCart">
+          <button class="cart-button" @click="isVisibleCart = !isVisibleCart">
             <span class="visually-hidden">Cart</span>
+            <div class="cart-fill" v-if="productsBasket.length">{{ totalQuantity }}</div>
           </button>
 
           <cart

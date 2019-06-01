@@ -53,9 +53,11 @@
 
       <div class="header-right">
         <div class="cart-wrapper">
-          <button class="cart-button cart-fill" @click="isVisibleCart = !isVisibleCart">
+          <button class="cart-button" @click="isVisibleCart = !isVisibleCart">
             <span class="visually-hidden">Cart</span>
+            <div class="cart-fill" v-if="productsBasket.length">{{ totalQuantity }}</div>
           </button>
+
 
           <cart
             :cart-items="productsBasket"
@@ -264,68 +266,13 @@
   <section class="basket-contents">
     <div class="container">
       <h2 class="visually-hidden">Basket-contents</h2>
+
       <shopping-cart
         :products="productsBasket"
         @remove="delProduct"
+        @validate="validateQuantity"
       ></shopping-cart>
-<!--      <table class="basket-contents-table">-->
-<!--        <tr>-->
-<!--          <th>Product details</th>-->
-<!--          <th>Unite price</th>-->
-<!--          <th>Quantity</th>-->
-<!--          <th>Shipping</th>-->
-<!--          <th>Subtotal</th>-->
-<!--          <th>Action</th>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--          <td class="basket-contents-item">-->
-<!--            <img src="img/product-item-13.jpg" alt="T-shirt" width="100" height="115">-->
-<!--            <h4>Mango people t-shirt</h4>-->
-<!--            <div class="rating-stars"></div>-->
-<!--            <p>Color:<span class="value">Red</span></p>-->
-<!--            <p>Size:<span class="value">XLL</span></p>-->
-<!--          </td>-->
-<!--          <td>$150</td>-->
-<!--          <td><input type="number" step="1" value="2"></td>-->
-<!--          <td>Free</td>-->
-<!--          <td>$300</td>-->
-<!--          <td>-->
-<!--            <i class="fa fa-times-circle" aria-hidden="true"></i><span class="visually-hidden">Delete item from cart</span>-->
-<!--          </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--          <td class="basket-contents-item">-->
-<!--            <img src="img/product-item-14.jpg" alt="T-shirt" width="100" height="115">-->
-<!--            <h4>Mango people t-shirt</h4>-->
-<!--            <div class="rating-stars"></div>-->
-<!--            <p>Color:<span class="value">Red</span></p>-->
-<!--            <p>Size:<span class="value">XLL</span></p>-->
-<!--          </td>-->
-<!--          <td>$150</td>-->
-<!--          <td><input type="number" step="1" value="2"></td>-->
-<!--          <td>Free</td>-->
-<!--          <td>$300</td>-->
-<!--          <td>-->
-<!--            <i class="fa fa-times-circle" aria-hidden="true"></i><span class="visually-hidden">Delete item from cart</span>-->
-<!--          </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--          <td class="basket-contents-item">-->
-<!--            <img src="img/product-item-19.jpg" alt="T-shirt" width="100" height="115">-->
-<!--            <h4>Mango people t-shirt</h4>-->
-<!--            <div class="rating-stars"></div>-->
-<!--            <p>Color:<span class="value">Red</span></p>-->
-<!--            <p>Size:<span class="value">XLL</span></p>-->
-<!--          </td>-->
-<!--          <td>$150</td>-->
-<!--          <td><input type="number" step="1" value="2"></td>-->
-<!--          <td>Free</td>-->
-<!--          <td>$300</td>-->
-<!--          <td>-->
-<!--            <i class="fa fa-times-circle" aria-hidden="true"></i><span class="visually-hidden">Delete item from cart</span>-->
-<!--          </td>-->
-<!--        </tr>-->
-<!--      </table>-->
+
       <div class="basket-contents-buttons clearfix">
         <button type="button" class="button-clear-basket">Clear shopping cart</button>
         <button type="button" class="button-continue">Continue Shopping</button>
@@ -349,8 +296,8 @@
             <button class="button-apply-coupon">Apply coupon</button>
           </li>
           <li class="shipping-form-column total-column">
-            <p class="sub-total-price">Sub total<span>$900</span></p>
-            <p class="grand-total-price">Grand Total<span>$900</span></p>
+            <p class="sub-total-price">Sub total<span>\${{totalPrice}}</span></p>
+            <p class="grand-total-price">Grand Total<span>\${{totalPrice}}</span></p>
             <a href="checkout.html" class="button-proceed-to-checkout">Proceed to checkout</a>
           </li>
         </ul>

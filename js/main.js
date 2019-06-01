@@ -50,6 +50,9 @@ const app = new Vue({
   computed: {
     totalPrice() {
       return this.productsBasket.reduce((accum, el) => accum += el.price * el.quantity, 0);
+    },
+    totalQuantity() {
+      return this.productsBasket.reduce((accum, el) => accum += el.quantity, 0);
     }
   },
   methods: {
@@ -86,13 +89,9 @@ const app = new Vue({
           }
         })
     },
-    filterGoods() {
-      this.filteredProducts =[];
-      let regExp = new RegExp( '(?:^|\\s)' + this.searchLine, 'i');
-      this.filteredProducts = this.products.filter(el => regExp.test(el.product_name));
-    },
-    closeFiltered() {
-      this.filteredProducts =[];
-    },
+    validateQuantity(event) {
+      console.log(event)
+      // return(/^[0-9]+/.test(e.keyCode))
+    }
   }
 });

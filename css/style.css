@@ -294,11 +294,10 @@ body {
   border-radius: 5px;
 }
 
-.cart-fill:after {
+.cart-fill {
   position: absolute;
   top: -3px;
   right: -5px;
-  content: "5";
   display: block;
   width: 19px;
   height: 19px;
