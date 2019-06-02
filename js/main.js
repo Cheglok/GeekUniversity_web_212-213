@@ -89,9 +89,8 @@ const app = new Vue({
           }
         })
     },
-    validateQuantity(event) {
-      console.log(event)
-      // return(/^[0-9]+/.test(e.keyCode))
-    }
+    clearBasket(){
+      this.productsBasket = [];
+    },
   }
 });
