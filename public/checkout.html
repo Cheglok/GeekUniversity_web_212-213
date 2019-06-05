@@ -3,13 +3,16 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Item</title>
+  <title>Checkout</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 
-<body class="item-page">
+<body>
+<div id="app">
+  <error ref="error"></error>
+  <h1 class="visually-hidden">Checkout</h1>
   <header class="main-header">
     <div class="header-header container">
       <div class="header-left">
@@ -50,31 +53,17 @@
 
       <div class="header-right">
         <div class="cart-wrapper">
-          <a href="shopping-cart.html" class="cart-button"><span class="visually-hidden">Cart</span></a>
+          <button class="cart-button" @click="isVisibleCart = !isVisibleCart">
+            <span class="visually-hidden">Cart</span>
+            <div class="cart-fill" v-if="productsBasket.length">{{ totalQuantity }}</div>
+          </button>
 
-          <div class="modal modal-cart">
-            <a href="item.html" class="item-in-cart">
-              <img src="img/item-in-cart-1.jpg" width="72" height="85" alt="green man's t-shirt">
-              <div class="description">
-                <h3>Reboxzane</h3>
-                <div class="rating-stars"><span class="visually-hidden"> 4,5 stars</span></div>
-                <span>1&nbsp;x $250</span>
-              </div>
-              <i class="fa fa-times-circle" aria-hidden="true"></i>
-            </a>
-            <a href="item.html" class="item-in-cart">
-              <img src="img/item-in-cart-2.jpg" width="72" height="85" alt="white women's t-shirt">
-              <div class="description">
-                <h3>Reboxzane</h3>
-                <div class="rating-stars"><span class="visually-hidden"> 4,5 stars</span></div>
-                <span>1&nbsp;x $250</span>
-              </div>
-              <i class="fa fa-times-circle" aria-hidden="true"></i>
-            </a>
-            <p class="total-price"><b>Total</b><b>$500.00</b></p>
-            <a href="checkout.html" class="checkout-button">Checkout</a>
-            <a href="shopping-cart.html" class="go-to-cart">Go&nbsp;to&nbsp;cart</a>
-          </div>
+          <cart
+            :cart-items="productsBasket"
+            :visibility="isVisibleCart"
+            :total-price="totalPrice"
+            @remove="delProduct"
+          ></cart>
 
         </div>
         <a class="account-button" href="#">My&nbsp;account</a>
@@ -130,7 +119,7 @@
           </div>
         </li>
         <li class="main-navigation-item">
-          <a class="mega-menu-link" href="catalog.html">Women</a>
+          <a class="mega-menu-link mega-menu-link-current" href="catalog.html">Women</a>
           <div class="modal modal-mega-menu">
             <div class="mega-menu-column">
               <h3>Women</h3>
@@ -273,128 +262,98 @@
     </div>
   </div>
 
-  <div class="slider">
-    <div class="item-slider">
-      <img src="img/item-slider-slide-1.jpg" width="597" height="680" alt="Moschino cheap and chic">
-      <div class="slider-controls-wrapper">
-        <button type="button" class="slider-control slider-control-left">
-          <i class="fas fa-angle-left"></i>
-        </button>
-        <button type="button" class="slider-control slider-control-right">
-          <i class="fas fa-angle-right"></i>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <div class="product-description container">
-    <h2>Women collection</h2>
-    <h3>Moschino cheap and chic</h3>
-    <p>Compellingly actualize fully researched processes before proactive outsourcing. Progressively syndicate collaborative architectures before cutting-edge services. Completely visualize parallel core competencies rather than exceptional portals. </p>
-    <span class="character first-character">Material:<b>Cotton</b></span>
-    <span class="character">Designer:<b>Binbuhan</b></span><br>
-    <span class="price">$561</span>
-    <form action="#" class="product-description-form">
-      <ul class="form-columns">
-        <li>
-          <p>Choose color</p>
-          <select name="colors" id="colors">
-            <option>Red</option>
-            <option>Green</option>
-          </select>
-        </li>
-        <li>
-          <p>Choose size</p>
-          <select name="size" id="size">
-            <option>XS</option>
-            <option>S</option>
-            <option>M</option>
-            <option>L</option>
-            <option>XL</option>
-            <option selected>XXL</option>
-          </select>
-        </li>
-        <li>
-          <p>Quantity</p>
-          <input type="number" id="quantity" name="quantity" placeholder="2">
-      </ul>
-      <button type="submit">Add to Cart</button>
-    </form>
-  </div>
-
-  <section class="also-like container">
-    <h2>You may like also</h2>
-    <ul class="products-list">
-      <li class="products-list-item">
-        <a href="item.html" class="product-list-item-link">
-          <img width="261" height="280" src="img/product-item-9.jpg" alt="white t-shirt">
-          <p>Blaze leggins<br><span>$52</span></p>
-          <div class="buy-shadow"></div>
-        </a>
-        <div class="product-list-item-options">
-          <a href="shopping-cart.html" class="products-buy">Add to Cart</a>
-          <button tupe="button" class="button-refresh"><span class="visually-hidden">Refresh</span></button>
-          <button tupe="button" class="button-like"><span class="visually-hidden">Like</span></button>
-        </div>
-      </li>
-      <li class="products-list-item">
-        <a href="item.html" class="product-list-item-link">
-          <img width="261" height="280" src="img/product-item-10.jpg" alt="red blouse">
-          <p>Alexa sweater<br><span>$52</span></p>
-          <div class="buy-shadow"></div>
-        </a>
-        <div class="product-list-item-options">
-          <a href="shopping-cart.html" class="products-buy">Add to Cart</a>
-          <button tupe="button" class="button-refresh"><span class="visually-hidden">Refresh</span></button>
-          <button tupe="button" class="button-like"><span class="visually-hidden">Like</span></button>
-        </div>
-      </li>
-      <li class="products-list-item">
-        <a href="item.html" class="product-list-item-link">
-          <img width="261" height="280" src="img/product-item-11.jpg" alt="gray jacket">
-          <p>Agnestop<br><span>$52</span></p>
-          <div class="buy-shadow"></div>
-        </a>
-        <div class="product-list-item-options">
-          <a href="shopping-cart.html" class="products-buy">Add to Cart</a>
-          <button tupe="button" class="button-refresh"><span class="visually-hidden">Refresh</span></button>
-          <button tupe="button" class="button-like"><span class="visually-hidden">Like</span></button>
-        </div>
-      </li>
-      <li class="products-list-item">
-        <a href="item.html" class="product-list-item-link">
-          <img width="261" height="280" src="img/product-item-12.jpg" alt="dress with flowers">
-          <p>Sylva sweater<br><span>$52</span></p>
-          <div class="buy-shadow"></div>
-        </a>
-        <div class="product-list-item-options">
-          <a href="shopping-cart.html" class="products-buy">Add to Cart</a>
-          <button tupe="button" class="button-refresh"><span class="visually-hidden">Refresh</span></button>
-          <button tupe="button" class="button-like"><span class="visually-hidden">Like</span></button>
-        </div>
-      </li>
-    </ul>
-  </section>
-
+  <main class="checkout-main container">
+    <details class="checkout-section clearfix" open>
+      <summary>
+        <h2 class="checkout-section__heading">01. Shipping adress</h2>
+      </summary>
+      <form action="#" class="checkout-section__check-form">
+        <h3 class="check-form__heading">Check as a guest or register</h3>
+        <p class="check-form__paragraph">Register with us for future convenience</p>
+        <input class="check-form__radio-input visually-hidden" type="radio" name="radio-checkout" id="radio-checkout">
+        <label class="check-form__radio-label" for="radio-checkout">
+          Checkout as guest
+        </label>
+        <input class="check-form__radio-input visually-hidden" type="radio" name="radio-checkout" id="radio-guest" checked>
+        <label class="check-form__radio-label" for="radio-guest">
+          Register
+        </label>
+        <h3 class="check-form__heading">Register and save time!</h3>
+        <p class="check-form__paragraph">Register with us for future convenience</p>
+        <ul class="check-form__features-list">
+          <li class="features-list__item"><i class="fas fa-angle-double-right"></i>Fast and easy checkout</li>
+          <li class="features-list__item"><i class="fas fa-angle-double-right"></i>Easy access to your order history and status</li>
+        </ul>
+        <button class="check-form__button" type="submit">Continue</button>
+      </form>
+      <form action="#" class="checkout-section__login-form">
+        <h3 class="login-form__heading">Already registed?</h3>
+        <p class="login-form__paragraph">Please log in below</p>
+        <label class="login-form__label">
+          Email address<span>*</span>
+          <input class="login-form__input-email" type="email" name="login-email" id="login-email">
+        </label>
+        <label class="login-form__label">
+          Password<span>*</span>
+          <input class="login-form__input-password" type="password" name="login-password" id="login-password">
+        </label>
+        <p class="login-form__attention"><span>*</span> Required fileds</p>
+        <button class="login-form__button" type="submit">Log in</button>
+        <a href="#" class="login-form__link-forgot">Forgot password?</a>
+      </form>
+    </details>
+    <details class="checkout-section">
+      <summary>
+        <h2 class="checkout-section__heading">02. Billing information</h2>
+      </summary>
+      Content
+    </details>
+    <details class="checkout-section">
+      <summary>
+        <h2 class="checkout-section__heading">03. Shipping information</h2>
+      </summary>
+      Content
+    </details>
+    <details class="checkout-section">
+      <summary>
+        <h2 class="checkout-section__heading">04. Shipping method</h2>
+      </summary>
+      Content
+    </details>
+    <details class="checkout-section">
+      <summary>
+        <h2 class="checkout-section__heading">05. Payment method</h2>
+      </summary>
+      Content
+    </details>
+    <details class="checkout-section">
+      <summary>
+        <h2 class="checkout-section__heading">06. Order review</h2>
+      </summary>
+      Content
+    </details>
+  </main>
 
   <section class="subscribe">
     <div class="container">
-      <div class="subscribe-left">
-        <q>Vestibulum quis porttitor dui! Quisque viverra nunc&nbsp;mi,
-          a&nbsp;pulvinar purus condimentum&nbsp;a. Aliquam condimentum mattis neque sed pretium</q> <br>
-        <span class="subscribe-quote-autor">Bin Burhan</span> <br>
-        <span class="subscribe-quote-address">Dhaka, Bd</span> <br>
-        <div class="white-rect"></div>
-        <div class="red-rect"></div>
-        <div class="white-rect"></div>
-      </div>
-      <div class="subscribe-right">
-        <h2>Subscribe</h2>
-        <p>for our newletter and promotion</p>
-        <form class="subscribe-form" action="#">
-          <input type="email" name="subscribe-email" class="subscribe-email" placeholder="Enter Your Email">
-          <button type="submit" class="subscribe-submit">Subscribe</button>
-        </form>
+      <div class="subscribe-wrapper">
+        <div class="subscribe-left">
+          <q>Vestibulum quis porttitor dui! Quisque viverra nunc&nbsp;mi,
+            a&nbsp;pulvinar purus condimentum&nbsp;a. Aliquam condimentum mattis neque sed pretium</q> <br>
+          <span class="subscribe-quote-autor">Bin Burhan</span> <br>
+          <span class="subscribe-quote-address">Dhaka, Bd</span> <br>
+          <div class="white-rect"></div>
+          <div class="red-rect"></div>
+          <div class="white-rect"></div>
+        </div>
+        <div class="subscribe-right">
+          <h2>Subscribe</h2>
+          <p>for our newletter and promotion</p>
+          <form class="subscribe-form" action="#">
+            <input type="email" name="subscribe-email" class="subscribe-email" placeholder="Enter Your Email">
+            <button type="submit" class="subscribe-submit">Subscribe</button>
+          </form>
+        </div>
       </div>
     </div>
   </section>
@@ -413,7 +372,7 @@
         <div class="footer-column">
           <h4>Company</h4>
           <ul>
-            <li><a class="footer-column-link" href="index.html">Home</a></li>
+            <li><a class="footer-column-link" href="#">Home</a></li>
             <li><a class="footer-column-link" href="catalog.html">Shop</a></li>
             <li><a class="footer-column-link" href="#">About</a></li>
             <li><a class="footer-column-link" href="#">How it&nbsp;works</a></li>
@@ -455,6 +414,21 @@
       </div>
     </div>
   </footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script defer src="js/CatalogComponents.js"></script>
+<script defer src="js/BasketComponents.js"></script>
+<script defer src="js/errorComponents.js"></script>
+<script defer src="js/main.js"></script>
+
+  <!--  смешная анимация, раскомментируй, чтобы упасть со стула-->
+<!--
+  <a href="index.html" class="foll-animation hat-foll-animation"></a>
+  <div class="foll-animation sock-foll-animation"></div>
+  <div class="foll-animation dress-foll-animation"></div>
+  < a href="index.html" class="foll-animation jeans-foll-animation"></a>
+  <div class="text-animation">You must buy!</div>
+-->
 
 </body>
 
