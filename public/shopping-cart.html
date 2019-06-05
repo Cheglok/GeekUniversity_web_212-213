@@ -3,18 +3,17 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Checkout</title>
+  <title>Shopping-cart</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 
 <body>
 <div id="app">
-  <error
-    :error="errorMessage"
-  ></error>
-  <h1 class="visually-hidden">Checkout</h1>
+  <error ref="error"></error>
+  <h1 class="visually-hidden">КОРЗИНА</h1>
   <header class="main-header">
     <div class="header-header container">
       <div class="header-left">
@@ -22,7 +21,6 @@
         <form class="header-form" action="#">
           <div class="header-form-select">
             Browse
-
             <div class=" modal modal-drop-down">
               <h2>Women</h2>
               <ul>
@@ -46,7 +44,6 @@
                 <li><a href="catalog.html">Jackets/vests</a></li>
               </ul>
             </div>
-
           </div>
           <input type="text" placeholder="Search for Item...">
           <button type="submit"><span class="visually-hidden">Найти</span><i class="fas fa-search"></i></button>
@@ -59,6 +56,7 @@
             <span class="visually-hidden">Cart</span>
             <div class="cart-fill" v-if="productsBasket.length">{{ totalQuantity }}</div>
           </button>
+
 
           <cart
             :cart-items="productsBasket"
@@ -77,7 +75,7 @@
         <li class="main-navigation-item">
           <a class="mega-menu-link" href="index.html">Home</a></li>
         <li class="main-navigation-item">
-          <a class="mega-menu-link" href="catalog.html">Man</a>
+          <a class="mega-menu-link mega-menu-link-current" href="catalog.html">Man</a>
           <div class="modal modal-mega-menu">
             <div class="mega-menu-column">
               <h3>Women</h3>
@@ -121,7 +119,7 @@
           </div>
         </li>
         <li class="main-navigation-item">
-          <a class="mega-menu-link mega-menu-link-current" href="catalog.html">Women</a>
+          <a class="mega-menu-link" href="catalog.html">Women</a>
           <div class="modal modal-mega-menu">
             <div class="mega-menu-column">
               <h3>Women</h3>
@@ -259,82 +257,57 @@
     <div class="container">
       <h2 class="new-arrivals-title">New arrivals</h2>
       <div class="breadcrumbs">
-        <a href="index.html">Home</a> / <a href="catalog.html">Men</a> / <a href="#" class="current-breadcrumb">New arrivals</a>
+        <a href="index.html">Home</a> / <a href="catalog.html">Men</a> / <a href="#" class="current-breadcrumb">New
+        arrivals</a>
       </div>
     </div>
   </div>
 
-  <main class="checkout-main container">
-    <details class="checkout-section clearfix" open>
-      <summary>
-        <h2 class="checkout-section__heading">01. Shipping adress</h2>
-      </summary>
-      <form action="#" class="checkout-section__check-form">
-        <h3 class="check-form__heading">Check as a guest or register</h3>
-        <p class="check-form__paragraph">Register with us for future convenience</p>
-        <input class="check-form__radio-input visually-hidden" type="radio" name="radio-checkout" id="radio-checkout">
-        <label class="check-form__radio-label" for="radio-checkout">
-          Checkout as guest
-        </label>
-        <input class="check-form__radio-input visually-hidden" type="radio" name="radio-checkout" id="radio-guest" checked>
-        <label class="check-form__radio-label" for="radio-guest">
-          Register
-        </label>
-        <h3 class="check-form__heading">Register and save time!</h3>
-        <p class="check-form__paragraph">Register with us for future convenience</p>
-        <ul class="check-form__features-list">
-          <li class="features-list__item"><i class="fas fa-angle-double-right"></i>Fast and easy checkout</li>
-          <li class="features-list__item"><i class="fas fa-angle-double-right"></i>Easy access to your order history and status</li>
-        </ul>
-        <button class="check-form__button" type="submit">Continue</button>
-      </form>
-      <form action="#" class="checkout-section__login-form">
-        <h3 class="login-form__heading">Already registed?</h3>
-        <p class="login-form__paragraph">Please log in below</p>
-        <label class="login-form__label">
-          Email address<span>*</span>
-          <input class="login-form__input-email" type="email" name="login-email" id="login-email">
-        </label>
-        <label class="login-form__label">
-          Password<span>*</span>
-          <input class="login-form__input-password" type="password" name="login-password" id="login-password">
-        </label>
-        <p class="login-form__attention"><span>*</span> Required fileds</p>
-        <button class="login-form__button" type="submit">Log in</button>
-        <a href="#" class="login-form__link-forgot">Forgot password?</a>
-      </form>
-    </details>
-    <details class="checkout-section">
-      <summary>
-        <h2 class="checkout-section__heading">02. Billing information</h2>
-      </summary>
-      Content
-    </details>
-    <details class="checkout-section">
-      <summary>
-        <h2 class="checkout-section__heading">03. Shipping information</h2>
-      </summary>
-      Content
-    </details>
-    <details class="checkout-section">
-      <summary>
-        <h2 class="checkout-section__heading">04. Shipping method</h2>
-      </summary>
-      Content
-    </details>
-    <details class="checkout-section">
-      <summary>
-        <h2 class="checkout-section__heading">05. Payment method</h2>
-      </summary>
-      Content
-    </details>
-    <details class="checkout-section">
-      <summary>
-        <h2 class="checkout-section__heading">06. Order review</h2>
-      </summary>
-      Content
-    </details>
-  </main>
+  <section class="basket-contents">
+
+    <div class="container">
+      <div  v-if="productsBasket.length">
+        <h2 class="visually-hidden">Basket-contents</h2>
+
+        <shopping-cart
+          :products="productsBasket"
+          @remove="delProduct"
+        ></shopping-cart>
+
+        <div class="basket-contents-buttons clearfix">
+          <button type="button" class="button-clear-basket" @click="clearBasket">Clear shopping cart</button>
+          <button type="button" class="button-continue">Continue Shopping</button>
+        </div>
+        <form class="shipping-form" action="#">
+          <ul>
+            <li class="shipping-form-column">
+              <h3>Shipping address</h3>
+              <select name="City" id="City">
+                <option value="Bangladesh">Bangladesh</option>
+                <option value="Moscow">Moscow</option>
+              </select>
+              <input type="text" placeholder="State" id="state">
+              <input type="text" placeholder="Postcode/Zip" id="postcode">
+              <button class="button-get-quote">Get a quote</button>
+            </li>
+            <li class="shipping-form-column">
+              <h3>Coupon discount</h3>
+              <p>Enter your coupon code if you have one</p>
+              <input type="text" placeholder="State" id="coupon">
+              <button class="button-apply-coupon">Apply coupon</button>
+            </li>
+            <li class="shipping-form-column total-column">
+              <p class="sub-total-price">Sub total<span>\${{totalPrice}}</span></p>
+              <p class="grand-total-price">Grand Total<span>\${{totalPrice}}</span></p>
+              <a href="checkout.html" class="button-proceed-to-checkout">Proceed to checkout</a>
+            </li>
+          </ul>
+        </form>
+      </div>
+      <h2 v-else>Корзина пуста</h2>
+    </div>
+  </section>
+
 
   <section class="subscribe">
     <div class="container">
@@ -364,8 +337,11 @@
     <div class="footer-top">
       <div class="container">
         <div class="footer-column">
-          <a class="logo" href="index.html"><img src="img/logo.png" width="59" height="51" alt="Brands-shop"><span>Bran<b>d</b></span></a>
-          <p>Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate multidisciplinary materials before go&nbsp;forward benefits. Intrinsicly syndicate an&nbsp;expanded array of&nbsp;processes and cross-unit partnerships.</p>
+          <a class="logo" href="index.html"><img src="img/logo.png" width="59" height="51"
+                                                 alt="Brands-shop"><span>Bran<b>d</b></span></a>
+          <p>Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate
+            multidisciplinary materials before go&nbsp;forward benefits. Intrinsicly syndicate an&nbsp;expanded array of&nbsp;processes
+            and cross-unit partnerships.</p>
 
           <p>Efficiently plagiarize 24/365 action items and focused infomediaries.
             Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.
@@ -407,30 +383,26 @@
       <div class="container">
         <p>&copy;&nbsp;2017 Brand All Rights Reserved.</p>
         <ul class="social-links">
-          <li><a href="https://www.facebook.com"><span class="visually-hidden">Facebook</span><i class="fab fa-facebook-f"></i></a></li>
-          <li><a href="https://twitter.com/"><span class="visually-hidden">Twitter</span><i class="fab fa-twitter"></i></a></li>
-          <li><a href="https://ru.linkedin.com/"><span class="visually-hidden">Instagramm</span><i class="fab fa-linkedin-in"></i></a></li>
-          <li><a href="https://www.pinterest.ru/"><span class="visually-hidden">Pinterest</span><i class="fab fa-pinterest-p"></i></a></li>
-          <li><a href="https://plus.google.com/discover"><span class="visually-hidden">Google+</span><i class="fab fa-google-plus-g"></i></a></li>
+          <li><a href="https://www.facebook.com"><span class="visually-hidden">Facebook</span><i
+            class="fab fa-facebook-f"></i></a></li>
+          <li><a href="https://twitter.com/"><span class="visually-hidden">Twitter</span><i class="fab fa-twitter"></i></a>
+          </li>
+          <li><a href="https://ru.linkedin.com/"><span class="visually-hidden">Instagramm</span><i
+            class="fab fa-linkedin-in"></i></a></li>
+          <li><a href="https://www.pinterest.ru/"><span class="visually-hidden">Pinterest</span><i
+            class="fab fa-pinterest-p"></i></a></li>
+          <li><a href="https://plus.google.com/discover"><span class="visually-hidden">Google+</span><i
+            class="fab fa-google-plus-g"></i></a></li>
         </ul>
       </div>
     </div>
   </footer>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script defer src="js/CatalogComponents.js"></script>
+<script defer src="js/ShoppingCartComponent.js"></script>
 <script defer src="js/BasketComponents.js"></script>
 <script defer src="js/errorComponents.js"></script>
 <script defer src="js/main.js"></script>
-
-  <!--  смешная анимация, раскомментируй, чтобы упасть со стула-->
-<!--
-  <a href="index.html" class="foll-animation hat-foll-animation"></a>
-  <div class="foll-animation sock-foll-animation"></div>
-  <div class="foll-animation dress-foll-animation"></div>
-  < a href="index.html" class="foll-animation jeans-foll-animation"></a>
-  <div class="text-animation">You must buy!</div>
--->
 
 </body>
 

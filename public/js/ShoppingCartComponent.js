@@ -36,8 +36,7 @@ Vue.component('product', {
           <td>Free</td>
           <td>\${{product.price * product.quantity}}</td>
           <td>
-            <i class="fa fa-times-circle" aria-hidden="true" @click. = "$parent.$emit('remove', product)"></i>
-            
+            <i class="fa fa-times-circle" aria-hidden="true" @click = "$parent.$emit('remove', product)"></i>            
           </td>
         </tr>`
-})
+});

@@ -3,15 +3,15 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Item</title>
+  <title>Catalog</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 
-<body class="item-page">
+<body class="catalog-page">
 <div id="app">
+  <error ref="error"></error>
   <header class="main-header">
     <div class="header-header container">
       <div class="header-left">
@@ -74,7 +74,7 @@
         <li class="main-navigation-item">
           <a class="mega-menu-link" href="index.html">Home</a></li>
         <li class="main-navigation-item">
-          <a class="mega-menu-link" href="catalog.html">Man</a>
+          <a class="mega-menu-link mega-menu-link-current" href="catalog.html">Man</a>
           <div class="modal modal-mega-menu">
             <div class="mega-menu-column">
               <h3>Women</h3>
@@ -118,7 +118,7 @@
           </div>
         </li>
         <li class="main-navigation-item">
-          <a class="mega-menu-link mega-menu-link-current" href="catalog.html">Women</a>
+          <a class="mega-menu-link" href="catalog.html">Women</a>
           <div class="modal modal-mega-menu">
             <div class="mega-menu-column">
               <h3>Women</h3>
@@ -256,69 +256,162 @@
     <div class="container">
       <h2 class="new-arrivals-title">New arrivals</h2>
       <div class="breadcrumbs">
-        <a href="index.html">Home</a> / <a href="catalog.html">Men</a> / <a href="#" class="current-breadcrumb">New
-        arrivals</a>
+        <a href="index.html">Home</a> / <a href="catalog.html">Men</a> / <a href="#" class="current-breadcrumb">New arrivals</a>
       </div>
     </div>
   </div>
 
-  <div class="slider">
-    <div class="item-slider">
-      <img src="img/item-slider-slide-1.jpg" width="597" height="680" alt="Moschino cheap and chic">
-      <div class="slider-controls-wrapper">
-        <button type="button" class="slider-control slider-control-left">
-          <i class="fas fa-angle-left"></i>
-        </button>
-        <button type="button" class="slider-control slider-control-right">
-          <i class="fas fa-angle-right"></i>
-        </button>
-      </div>
-    </div>
-  </div>
+  <main class=container>
+    <aside>
+      <nav class="categories-nav">
+        <details open>
+          <summary>Category</summary>
+          <ul>
+            <li>Accessories</li>
+            <li>Bags</li>
+            <li>Denim</li>
+            <li>Hoodies &amp; Sweatshirts</li>
+            <li>Jackets &amp; Coats</li>
+            <li>Pants</li>
+            <li>Polos</li>
+            <li>Shirts</li>
+            <li>Shoes</li>
+            <li>Shorts</li>
+            <li>Sweaters &amp; Knits</li>
+            <li>T-Shirts</li>
+            <li>Tanks</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Brand</summary>
+          <ul>
+            <li>Accessories</li>
+            <li>Bags</li>
+            <li>Denim</li>
+            <li>Hoodies &amp; Sweatshirts</li>
+            <li>Jackets &amp; Coats</li>
+            <li>Pants</li>
+            <li>Polos</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Designer</summary>
+          <ul>
+            <li>Accessories</li>
+            <li>Bags</li>
+            <li>Denim</li>
+          </ul>
+        </details>
+      </nav>
+    </aside>
+    <div class="main-right clearfix">
+      <form action="#" class="catalog-form">
+        <ul class="catalog-form-columns">
+          <li class="catalog-form-column">
+            <h4>Trending now</h4>
+            <ul class="trending-now-list">
+              <li>Bohemian</li>
+              <li>Floral</li>
+              <li>Lace</li>
+              <li>Floral</li>
+              <li>Lace</li>
+              <li>Bohemian</li>
+            </ul>
+          </li>
+          <li class="catalog-form-column">
+            <h4>Size</h4>
+            <ul class="size-list">
+              <li>
+                <input type="checkbox" id="xxs" class="size-list-checkbox">
+                <label for="xxs">xxs</label>
+              </li>
+              <li>
+                <input type="checkbox" id="xs" class="size-list-checkbox">
+                <label for="xs">xs</label>
+              </li>
+              <li>
+                <input type="checkbox" id="s" class="size-list-checkbox">
+                <label for="s">s</label>
+              </li>
+              <li>
+                <input type="checkbox" id="m" class="size-list-checkbox" checked>
+                <label for="m">m</label>
+              </li>
+              <li>
+                <input type="checkbox" id="l" class="size-list-checkbox">
+                <label for="l">l</label>
+              </li>
+              <li>
+                <input type="checkbox" id="xl" class="size-list-checkbox">
+                <label for="xl">xl</label>
+              </li>
+              <li>
+                <input type="checkbox" id="xxl" class="size-list-checkbox">
+                <label for="xxl">xxl</label>
+              </li>
+            </ul>
+          </li>
+          <li class="catalog-form-column">
+            <h4>Price</h4>
+            <div class="range-form">
+              <div class="range">
+                <div class="line">
+                  <div class="left-point"></div>
+                  <div class="current-line"></div>
+                  <div class="right-pointer"></div>
+                </div>
+              </div>
+              <div class="range-left-price">$52</div>
+              <div class="range-right-price">$400</div>
+            </div>
+          </li>
+        </ul>
+        <div class="catalog-form-bottom clearfix">
+          <span>Sort by</span>
+          <div class="catalog-form-select">Name</div>
+          <span>Show</span>
+          <div class="catalog-form-select">09</div>
+        </div>
+      </form>
 
-  <div class="product-description container">
-    <h2>Women collection</h2>
-    <h3>Moschino cheap and chic</h3>
-    <p>Compellingly actualize fully researched processes before proactive outsourcing. Progressively syndicate
-      collaborative architectures before cutting-edge services. Completely visualize parallel core competencies rather
-      than exceptional portals. </p>
-    <span class="character first-character">Material:<b>Cotton</b></span>
-    <span class="character">Designer:<b>Binbuhan</b></span><br>
-    <span class="price">$561</span>
-    <form action="#" class="product-description-form">
-      <ul class="form-columns">
-        <li>
-          <p>Choose color</p>
-          <select name="colors" id="colors">
-            <option>Red</option>
-            <option>Green</option>
-          </select>
-        </li>
-        <li>
-          <p>Choose size</p>
-          <select name="size" id="size">
-            <option>XS</option>
-            <option>S</option>
-            <option>M</option>
-            <option>L</option>
-            <option>XL</option>
-            <option selected>XXL</option>
-          </select>
-        </li>
-        <li>
-          <p>Quantity</p>
-          <input type="number" id="quantity" name="quantity" placeholder="2">
+      <products
+        :products="catalogProducts"
+        @add-product="addProduct"
+      ></products>
+
+      <ul class="pagination">
+        <li><a href="#"><i class="fas fa-angle-left"></i></a></li>
+        <li><a href="#" class="pagination-current">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">6</a></li>
+        <li>...</li>
+        <li><a href="#">20</a></li>
+        <li><a href="#"><i class="fas fa-angle-right"></i></a></li>
       </ul>
-      <button type="submit">Add to Cart</button>
-    </form>
-  </div>
+      <button type="button" class="catalog-view-all">View all</button>
+    </div>
+  </main>
 
-  <section class="also-like container">
-    <h2>You may like also</h2>
-    <products
-      :products="itemProducts"
-      @add-product="addProduct"
-    ></products>
+  <section class="features-mini">
+    <div class="container">
+      <ul>
+        <li>
+          <h4>Free delivery</h4>
+          <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+        </li>
+        <li>
+          <h4>Sales &amp; discounts</h4>
+          <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+        </li>
+        <li>
+          <h4>Quality assurance</h4>
+          <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+        </li>
+      </ul>
+    </div>
   </section>
 
   <section class="subscribe">
@@ -346,14 +439,11 @@
   </section>
 
   <footer class="main-footer">
-    <div class="footer-top">
+      <div class="footer-top">
       <div class="container">
         <div class="footer-column">
-          <a class="logo" href="index.html"><img src="img/logo.png" width="59" height="51"
-                                                 alt="Brands-shop"><span>Bran<b>d</b></span></a>
-          <p>Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate
-            multidisciplinary materials before go&nbsp;forward benefits. Intrinsicly syndicate an&nbsp;expanded array of&nbsp;processes
-            and cross-unit partnerships.</p>
+          <a class="logo" href="index.html"><img src="img/logo.png" width="59" height="51" alt="Brands-shop"><span>Bran<b>d</b></span></a>
+          <p>Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate multidisciplinary materials before go&nbsp;forward benefits. Intrinsicly syndicate an&nbsp;expanded array of&nbsp;processes and cross-unit partnerships.</p>
 
           <p>Efficiently plagiarize 24/365 action items and focused infomediaries.
             Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.
@@ -362,7 +452,7 @@
         <div class="footer-column">
           <h4>Company</h4>
           <ul>
-            <li><a class="footer-column-link" href="index.html">Home</a></li>
+            <li><a class="footer-column-link"  href="#">Home</a></li>
             <li><a class="footer-column-link" href="catalog.html">Shop</a></li>
             <li><a class="footer-column-link" href="#">About</a></li>
             <li><a class="footer-column-link" href="#">How it&nbsp;works</a></li>
@@ -395,27 +485,21 @@
       <div class="container">
         <p>&copy;&nbsp;2017 Brand All Rights Reserved.</p>
         <ul class="social-links">
-          <li><a href="https://www.facebook.com"><span class="visually-hidden">Facebook</span><i
-            class="fab fa-facebook-f"></i></a></li>
-          <li><a href="https://twitter.com/"><span class="visually-hidden">Twitter</span><i class="fab fa-twitter"></i></a>
-          </li>
-          <li><a href="https://ru.linkedin.com/"><span class="visually-hidden">Instagramm</span><i
-            class="fab fa-linkedin-in"></i></a></li>
-          <li><a href="https://www.pinterest.ru/"><span class="visually-hidden">Pinterest</span><i
-            class="fab fa-pinterest-p"></i></a></li>
-          <li><a href="https://plus.google.com/discover"><span class="visually-hidden">Google+</span><i
-            class="fab fa-google-plus-g"></i></a></li>
+          <li><a href="https://www.facebook.com"><span class="visually-hidden">Facebook</span><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="https://twitter.com/"><span class="visually-hidden">Twitter</span><i class="fab fa-twitter"></i></a></li>
+          <li><a href="https://ru.linkedin.com/"><span class="visually-hidden">Instagramm</span><i class="fab fa-linkedin-in"></i></a></li>
+          <li><a href="https://www.pinterest.ru/"><span class="visually-hidden">Pinterest</span><i class="fab fa-pinterest-p"></i></a></li>
+          <li><a href="https://plus.google.com/discover"><span class="visually-hidden">Google+</span><i class="fab fa-google-plus-g"></i></a></li>
         </ul>
       </div>
     </div>
   </footer>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script defer src="js/CatalogComponents.js"></script>
-<script defer src="js/BasketComponents.js"></script>
-<script defer src="js/errorComponents.js"></script>
-<script defer src="js/main.js"></script>
-
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script defer src="js/CatalogComponents.js"></script>
+  <script defer src="js/BasketComponents.js"></script>
+  <script defer src="js/errorComponents.js"></script>
+  <script defer src="js/main.js"></script>
 
 </body>
 

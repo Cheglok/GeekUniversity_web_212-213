@@ -24,7 +24,7 @@
     "sex": "man"
   },
   {
-    "id_product": "4",
+    "id_product": 4,
     "product_name": "Mango People T-shirt",
     "alt": "dress with flowers",
     "price": 52,
@@ -32,7 +32,7 @@
     "sex": "woman"
   },
   {
-    "id_product": "5",
+    "id_product": 5,
     "product_name": "Mango People T-shirt",
     "alt": "stripped robe",
     "price": 52,
@@ -40,7 +40,7 @@
     "sex": "woman"
   },
   {
-    "id_product": "6",
+    "id_product": 6,
     "product_name": "Mango People T-shirt",
     "alt": "grey suit",
     "price": 52,
@@ -48,7 +48,7 @@
     "sex": "man"
   },
   {
-    "id_product": "7",
+    "id_product": 7,
     "product_name": "Mango People T-shirt",
     "alt": "Beige pants",
     "price": 52,
@@ -56,7 +56,7 @@
     "sex": "man"
   },
   {
-    "id_product": "8",
+    "id_product": 8,
     "product_name": "Mango People T-shirt",
     "alt": "dark jacket and light shorts",
     "price": 52,
@@ -64,7 +64,7 @@
     "sex": "man"
   },
   {
-    "id_product": "9",
+    "id_product": 9,
     "product_name": "Mango People T-shirt",
     "alt": "Black suite",
     "price": 52,
@@ -72,7 +72,7 @@
     "sex": "woman"
   },
   {
-    "id_product": "10",
+    "id_product": 10,
     "product_name": "Mango People T-shirt",
     "alt": "Black bloose and skirt",
     "price": 52,
@@ -80,7 +80,7 @@
     "sex": "woman"
   },
   {
-    "id_product": "11",
+    "id_product": 11,
     "product_name": "Mango People T-shirt",
     "alt": "Yellow bloose and stripped pants",
     "price": 52,
@@ -88,7 +88,7 @@
     "sex": "woman"
   },
   {
-    "id_product": "12",
+    "id_product": 12,
     "product_name": "Mango People T-shirt",
     "alt": "Gray sweater and black leggings",
     "price": 52,
@@ -96,7 +96,7 @@
     "sex": "woman"
   },
   {
-    "id_product": "13",
+    "id_product": 13,
     "product_name": "Mango People T-shirt",
     "alt": "Black hoody",
     "price": 52,
@@ -104,7 +104,7 @@
     "sex": "man"
   },
   {
-    "id_product": "14",
+    "id_product": 14,
     "product_name": "Mango People T-shirt",
     "product_alt": "Black blazer",
     "product_price": 52,
@@ -112,7 +112,7 @@
     "product_sex": "man"
   },
   {
-    "id_product": "15",
+    "id_product": 15,
     "product_name": "Mango People T-shirt",
     "alt": "Gray-dotted T-shirt",
     "price": 52,
@@ -120,7 +120,7 @@
     "sex": "man"
   },
   {
-    "id_product": "16",
+    "id_product": 16,
     "product_name": "Mango People T-shirt",
     "alt": "REd T-shirt and windbreaker",
     "price": 52,
@@ -128,7 +128,7 @@
     "sex": "man"
   },
   {
-    "id_product": "17",
+    "id_product": 17,
     "product_name": "Mango People T-shirt",
     "alt": "Black jacket",
     "price": 52,
@@ -136,7 +136,7 @@
     "sex": "man"
   },
   {
-    "id_product": "18",
+    "id_product": 18,
     "product_name": "Mango People T-shirt",
     "alt": "Blue-dotted T-shirt",
     "price": 52,
@@ -144,7 +144,7 @@
     "sex": "man"
   },
   {
-    "id_product": "19",
+    "id_product": 19,
     "product_name": "Mango People T-shirt",
     "alt": "Black jacket",
     "price": 52,
@@ -152,7 +152,7 @@
     "sex": "man"
   },
   {
-    "id_product": "20",
+    "id_product": 20,
     "product_name": "Mango People T-shirt",
     "alt": "Green T-shirt",
     "price": 52,
@@ -160,7 +160,7 @@
     "sex": "man"
   },
   {
-    "id_product": "21",
+    "id_product": 21,
     "product_name": "Mango People T-shirt",
     "alt": "White T-shirt",
     "price": 52,
